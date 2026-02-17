@@ -3,6 +3,24 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-touchevents js">
 
 <head>
+	<script>
+		// Disable all anchor links except # tags (e.g. search icon, hamburger icon)
+		document.addEventListener('click', function (e) {
+			var t = e.target;
+			while (t && t !== document) {
+				if (t.tagName === 'A') {
+					var href = (t.getAttribute('href') || '').trim();
+					if (href === '#' || href.endsWith('#')) {
+						return;
+					}
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				}
+				t = t.parentNode;
+			}
+		}, true);
+	</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script async=""
 		src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/clarity.js.download"></script>
@@ -30,8 +48,8 @@
 		content="The Daily Star, Bangladeshi leading English newspaper updates 24/7 national &amp; international breaking News. Get latest news from credible English newspaper.">
 	<meta name="keywords"
 		content="the daily star, daily star, thedailystar, daily star news, daily star Bangladesh, latest news, breaking news, current news, national news, global News, international news, world news, Bangladesh newspapers, Bangladeshi Newspapers, Online newspaper, internet newspaper, Bengali Newspaper, Bangla Newspaper, Bangladesh News, Bangladesh latest news, Bangladesh Breaking News, Bangla online news, BD newspaper, Daily newspaper in Bangladesh, Bengali daily newspaper, all bangla newspaper, technology news, tech news, health news, science news, sports news, business news, entertainment news, lifestyle news, star lifestyle, star showbiz, multimedia, law and rights, human rights, science news, economics news, cricket news, bollywood news, Hollywood news, recent news, Political news, video stories, top news, cultural news, star weekend, stock market, feature story,">
-	<link rel="shortlink" href="https://www.thedailystar.net/">
-	<link rel="canonical" href="https://www.thedailystar.net/">
+	<link rel="shortlink" href="https://www.thedailystar.blog/">
+	<link rel="canonical" href="https://www.thedailystar.blog/">
 	<meta property="og:site_name" content="The Daily Star">
 	<meta property="og:type" content="Page">
 	<meta property="og:url" content="https://www.thedailystar.net/node/27">
@@ -241,7 +259,7 @@
 			googletag.enableServices();
 		});
 	</script>
-	<link rel="icon" href="https://www.thedailystar.net/themes/custom/swallow/favicon.ico"
+	<link rel="icon" href="https://www.thedailystar.blog/themes/custom/swallow/favicon.ico"
 		type="image/vnd.microsoft.icon">
 	<title>The Daily Star - Bangladesh's National and International Breaking News</title>
 	<link rel="stylesheet" media="all"
@@ -594,7 +612,7 @@
 
 <body class="path-frontpage page-node-type-page sticky_nav" data-once="parallax-init">
 	<div id="fb-root"></div>
-	<a href="https://www.thedailystar.net/#main-content" class="visually-hidden focusable skip-link">
+	<a href="https://www.thedailystar.blog/#main-content" class="visually-hidden focusable skip-link">
 		Skip to main content
 	</a>
 	<div class="page-wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
@@ -621,7 +639,7 @@
 								<div id="block-swallow-site-branding"
 									class="block block-system block-system-branding-block">
 									<div class="flex gap-[10px] items-center">
-										<a href="https://www.thedailystar.net/" title="Home" rel="home"
+										<a href="https://www.thedailystar.blog/" title="Home" rel="home"
 											class="site-logo basis-2/3">
 											<img class="w-[330px] h-[64px]"
 												src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/logo.svg"
@@ -646,7 +664,7 @@
 												<div class="header-news-card">
 													<div class="views-field views-field-field-featured-media relative">
 														<div class="field-content"><span class="icon-video"></span>
-															<a href="https://www.thedailystar.net/star-multimedia/news/key-challenges-tarique-rahman-led-bnp-govt-ahead-4107236"
+															<a href="https://www.thedailystar.blog/star-multimedia/news/key-challenges-tarique-rahman-led-bnp-govt-ahead-4107236"
 																hreflang="en"><img loading="lazy"
 																	src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/bnp challenges.jpg"
 																	width="80" height="80" alt=""
@@ -656,7 +674,7 @@
 													</div>
 													<div class="views-field views-field-title">
 														<h5 class="field-content card-title"><a
-																href="https://www.thedailystar.net/star-multimedia/news/key-challenges-tarique-rahman-led-bnp-govt-ahead-4107236"
+																href="https://www.thedailystar.blog/star-multimedia/news/key-challenges-tarique-rahman-led-bnp-govt-ahead-4107236"
 																hreflang="en">Key challenges for Tarique Rahman-led BNP
 																govt ahead</a></h5>
 													</div>
@@ -664,7 +682,7 @@
 												<div class="header-news-card">
 													<div class="views-field views-field-field-featured-media relative">
 														<div class="field-content"><span class="icon-video"></span>
-															<a href="https://www.thedailystar.net/star-multimedia/news/mahfuz-anam-tarique-rahman-must-build-image-zero-tolerance-negligence-4107231"
+															<a href="https://www.thedailystar.blog/star-multimedia/news/mahfuz-anam-tarique-rahman-must-build-image-zero-tolerance-negligence-4107231"
 																hreflang="en"><img loading="lazy"
 																	src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/tarique-DS.jpg"
 																	width="80" height="80" alt=""
@@ -674,7 +692,7 @@
 													</div>
 													<div class="views-field views-field-title">
 														<h5 class="field-content card-title"><a
-																href="https://www.thedailystar.net/star-multimedia/news/mahfuz-anam-tarique-rahman-must-build-image-zero-tolerance-negligence-4107231"
+																href="https://www.thedailystar.blog/star-multimedia/news/mahfuz-anam-tarique-rahman-must-build-image-zero-tolerance-negligence-4107231"
 																hreflang="en">Mahfuz Anam: Tarique Rahman must build an
 																image of zero tolerance for negligence</a></h5>
 													</div>
@@ -682,7 +700,7 @@
 												<div class="header-news-card">
 													<div class="views-field views-field-field-featured-media relative">
 														<div class="field-content"><span class="icon-video"></span>
-															<a href="https://www.thedailystar.net/star-multimedia/news/yes-vote-won-now-what-will-happen-bnps-notes-dissent-4107221"
+															<a href="https://www.thedailystar.blog/star-multimedia/news/yes-vote-won-now-what-will-happen-bnps-notes-dissent-4107221"
 																hreflang="en"><img loading="lazy"
 																	src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/upper.jpg"
 																	width="80" height="80" alt=""
@@ -692,7 +710,7 @@
 													</div>
 													<div class="views-field views-field-title">
 														<h5 class="field-content card-title"><a
-																href="https://www.thedailystar.net/star-multimedia/news/yes-vote-won-now-what-will-happen-bnps-notes-dissent-4107221"
+																href="https://www.thedailystar.blog/star-multimedia/news/yes-vote-won-now-what-will-happen-bnps-notes-dissent-4107221"
 																hreflang="en">'Yes' vote won: Now what will happen to
 																BNP's notes of dissent?</a></h5>
 													</div>
@@ -703,11 +721,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="lg:hidden flex"> <a href="https://bangla.thedailystar.net/" target="_blank"
+						<div class="lg:hidden flex"> <a href="https://bangla.thedailystar.blog/" target="_blank"
 								class="headar-icon bangla-icon me-1.5">
 								<span class="text-[14px] font-semibold">বাংলা</span>
 							</a>
-							<a href="https://www.thedailystar.net/#" class="headar-icon search-icon">
+							<a href="https://www.thedailystar.blog/#" class="headar-icon search-icon">
 								<svg class="open-state" width="18" height="18" viewBox="0 0 18 18" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
@@ -722,7 +740,7 @@
 										stroke-linejoin="round"></path>
 								</svg>
 							</a>
-							<a href="https://www.thedailystar.net/#" class="headar-icon hamburger-icon">
+							<a href="https://www.thedailystar.blog/#" class="headar-icon hamburger-icon">
 								<svg class="open-state" width="20" height="14" viewBox="0 0 20 14" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path d="M0 1H20" stroke="#040D33" stroke-width="2" stroke-linejoin="round"></path>
@@ -758,7 +776,7 @@
 				<div class="column">
 					<div
 						class="border-b-[1px] border-black_01 flex gap-[32px] justify-between items-center font-inter font-semibold relative">
-						<a href="https://www.thedailystar.net/" class="flex-none sticky-logo">
+						<a href="https://www.thedailystar.blog/" class="flex-none sticky-logo">
 							<svg width="18" height="23" viewBox="0 0 18 23" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -776,7 +794,7 @@
 										</h2>
 										<ul>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/news"
+												<a href="https://www.thedailystar.blog/news"
 													data-drupal-link-system-path="taxonomy/term/283513">News</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -796,47 +814,47 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/news/bangladesh/politics"
+														<a href="https://www.thedailystar.blog/news/bangladesh/politics"
 															data-drupal-link-system-path="taxonomy/term/283525">Politics</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/bangladesh/governance"
+														<a href="https://www.thedailystar.blog/news/bangladesh/governance"
 															data-drupal-link-system-path="taxonomy/term/283521">Governance</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/bangladesh/crime-justice"
+														<a href="https://www.thedailystar.blog/news/bangladesh/crime-justice"
 															data-drupal-link-system-path="taxonomy/term/283533">Crime
 															and Justice</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/bangladesh/accidents-fires"
+														<a href="https://www.thedailystar.blog/news/bangladesh/accidents-fires"
 															data-drupal-link-system-path="taxonomy/term/283717">Accidents
 															and Fires</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/tech-startup"
+														<a href="https://www.thedailystar.blog/tech-startup"
 															data-drupal-link-system-path="taxonomy/term/283065">Technology</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/youth/education"
+														<a href="https://www.thedailystar.blog/youth/education"
 															data-drupal-link-system-path="taxonomy/term/283201">Education</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/health/healthcare"
+														<a href="https://www.thedailystar.blog/health/healthcare"
 															data-drupal-link-system-path="taxonomy/term/283405">Healthcare</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/environment"
+														<a href="https://www.thedailystar.blog/environment"
 															data-drupal-link-system-path="taxonomy/term/21">Environment</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/world"
+														<a href="https://www.thedailystar.blog/news/world"
 															data-drupal-link-system-path="taxonomy/term/8">World</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/opinion"
+												<a href="https://www.thedailystar.blog/opinion"
 													data-drupal-link-system-path="taxonomy/term/4">Opinion</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -856,25 +874,25 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/opinion/editorial"
+														<a href="https://www.thedailystar.blog/opinion/editorial"
 															data-drupal-link-system-path="taxonomy/term/61">Editorial</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/opinion/views"
+														<a href="https://www.thedailystar.blog/opinion/views"
 															data-drupal-link-system-path="taxonomy/term/283721">Views</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/opinion/interviews"
+														<a href="https://www.thedailystar.blog/opinion/interviews"
 															data-drupal-link-system-path="taxonomy/term/125107">Interviews</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/opinion/views/tribute"
+														<a href="https://www.thedailystar.blog/opinion/views/tribute"
 															data-drupal-link-system-path="taxonomy/term/128134">Tribute</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/business"
+												<a href="https://www.thedailystar.blog/business"
 													data-drupal-link-system-path="taxonomy/term/2">Business</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -894,30 +912,30 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/business/economy"
+														<a href="https://www.thedailystar.blog/business/economy"
 															data-drupal-link-system-path="taxonomy/term/159361">Economy</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/bangladesh/agriculture"
+														<a href="https://www.thedailystar.blog/news/bangladesh/agriculture"
 															data-drupal-link-system-path="taxonomy/term/283529">Agriculture</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/business/economy/industries"
+														<a href="https://www.thedailystar.blog/business/economy/industries"
 															data-drupal-link-system-path="taxonomy/term/283285">Industry</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/tech-startup/startups-0"
+														<a href="https://www.thedailystar.blog/tech-startup/startups-0"
 															data-drupal-link-system-path="taxonomy/term/609736">Startups</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/business/global-economy"
+														<a href="https://www.thedailystar.blog/business/global-economy"
 															data-drupal-link-system-path="taxonomy/term/283325">Global
 															Economy</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/sports"
+												<a href="https://www.thedailystar.blog/sports"
 													data-drupal-link-system-path="taxonomy/term/3">Sports</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -937,26 +955,26 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/sports/cricket"
+														<a href="https://www.thedailystar.blog/sports/cricket"
 															data-drupal-link-system-path="taxonomy/term/36">Cricket</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/sports/football"
+														<a href="https://www.thedailystar.blog/sports/football"
 															data-drupal-link-system-path="taxonomy/term/38">Football</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/sports/more-sports/tennis"
+														<a href="https://www.thedailystar.blog/sports/more-sports/tennis"
 															data-drupal-link-system-path="taxonomy/term/37">Tennis</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/sports/more-sports"
+														<a href="https://www.thedailystar.blog/sports/more-sports"
 															data-drupal-link-system-path="taxonomy/term/283137">More
 															Sports</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/life-living"
+												<a href="https://www.thedailystar.blog/life-living"
 													data-drupal-link-system-path="taxonomy/term/283261">Lifestyle</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -976,32 +994,32 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/lifestyle/fashion"
+														<a href="https://www.thedailystar.blog/lifestyle/fashion"
 															data-drupal-link-system-path="taxonomy/term/628">Fashion</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/life-living/relationships-family"
+														<a href="https://www.thedailystar.blog/life-living/relationships-family"
 															data-drupal-link-system-path="taxonomy/term/614811">Relationships</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/life-living/health-fitness"
+														<a href="https://www.thedailystar.blog/life-living/health-fitness"
 															data-drupal-link-system-path="taxonomy/term/287056">Health
 															and Wellness</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/life-living/food-recipes"
+														<a href="https://www.thedailystar.blog/life-living/food-recipes"
 															data-drupal-link-system-path="taxonomy/term/283269">Food and
 															Recipe</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/lifestyle/travelogue"
+														<a href="https://www.thedailystar.blog/lifestyle/travelogue"
 															data-drupal-link-system-path="taxonomy/term/642">Travel and
 															Leisure</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/culture"
+												<a href="https://www.thedailystar.blog/culture"
 													data-drupal-link-system-path="taxonomy/term/283445">Culture</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1021,31 +1039,31 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/entertainment"
+														<a href="https://www.thedailystar.blog/entertainment"
 															data-drupal-link-system-path="taxonomy/term/283449">Entertainment</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/books-literature"
+														<a href="https://www.thedailystar.blog/books-literature"
 															data-drupal-link-system-path="taxonomy/term/286946">Books
 															and Literature</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/entertainment/heritage"
+														<a href="https://www.thedailystar.blog/entertainment/heritage"
 															data-drupal-link-system-path="taxonomy/term/283469">Heritage</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/entertainment/tv-film"
+														<a href="https://www.thedailystar.blog/entertainment/tv-film"
 															data-drupal-link-system-path="taxonomy/term/283453">TV &amp;
 															Film</a>
 													</li>
 												</ul>
 											</li>
 											<li>
-												<a href="https://www.thedailystar.net/slow-reads"
+												<a href="https://www.thedailystar.blog/slow-reads"
 													data-drupal-link-system-path="taxonomy/term/1336956">Slow Reads</a>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/youth"
+												<a href="https://www.thedailystar.blog/youth"
 													data-drupal-link-system-path="taxonomy/term/283197">Youth</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1065,33 +1083,33 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/campus/education"
+														<a href="https://www.thedailystar.blog/campus/education"
 															data-drupal-link-system-path="taxonomy/term/607386">Academics</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/youth/careers"
+														<a href="https://www.thedailystar.blog/youth/careers"
 															data-drupal-link-system-path="taxonomy/term/283221">Career
 															and Skills</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/campus/campus-life"
+														<a href="https://www.thedailystar.blog/campus/campus-life"
 															data-drupal-link-system-path="taxonomy/term/607401">Campus
 															Life</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/campus/campus"
+														<a href="https://www.thedailystar.blog/campus/campus"
 															data-drupal-link-system-path="taxonomy/term/607406">Off
 															Campus</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/shout/pop-culture"
+														<a href="https://www.thedailystar.blog/shout/pop-culture"
 															data-drupal-link-system-path="taxonomy/term/5604">Pop
 															Culture</a>
 													</li>
 												</ul>
 											</li>
 											<li class="has-submenu">
-												<a href="https://www.thedailystar.net/deep-dive"
+												<a href="https://www.thedailystar.blog/deep-dive"
 													data-drupal-link-system-path="taxonomy/term/1519037">Ds+</a>
 												<span
 													class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1111,30 +1129,30 @@
 													</svg></span>
 												<ul>
 													<li>
-														<a href="https://www.thedailystar.net/business/business-plus"
+														<a href="https://www.thedailystar.blog/business/business-plus"
 															data-drupal-link-system-path="taxonomy/term/1442261">Business
 															+</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/news/investigative-stories"
+														<a href="https://www.thedailystar.blog/news/investigative-stories"
 															data-drupal-link-system-path="taxonomy/term/283541">Investigative
 															Stories</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/roundtables"
+														<a href="https://www.thedailystar.blog/roundtables"
 															data-drupal-link-system-path="taxonomy/term/90">Roundtables</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/supplements"
+														<a href="https://www.thedailystar.blog/supplements"
 															data-drupal-link-system-path="node/4085781">Supplements</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/law-our-rights"
+														<a href="https://www.thedailystar.blog/law-our-rights"
 															data-drupal-link-system-path="taxonomy/term/53">Law &amp;
 															Our Rights</a>
 													</li>
 													<li>
-														<a href="https://www.thedailystar.net/my-dhaka"
+														<a href="https://www.thedailystar.blog/my-dhaka"
 															data-drupal-link-system-path="taxonomy/term/530731">My
 															Dhaka</a>
 													</li>
@@ -1149,17 +1167,17 @@
 							<div class="header-nav">
 								<ul class="!gap-0">
 									<li class="!gap-0">
-										<a href="https://bangla.thedailystar.net/" target="_blank">বাংলা</a>
+										<a href="https://bangla.thedailystar.blog/" target="_blank">বাংলা</a>
 									</li>
 									<li class="!gap-0">
-										<a href="https://epaper.thedailystar.net/" target="_blank">E-paper</a>
+										<a href="https://epaper.thedailystar.blog/" target="_blank">E-paper</a>
 									</li>
 									<li class="!gap-0">
-										<a href="https://www.thedailystar.net/todays-news" target="_blank">Today’s
+										<a href="https://www.thedailystar.blog/todays-news" target="_blank">Today’s
 											News</a>
 									</li>
 									<li class="!gap-0">
-										<a href="https://www.thedailystar.net/registration" target="_blank">
+										<a href="https://www.thedailystar.blog/registration" target="_blank">
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 												stroke="currentColor" stroke-width="2" stroke-linecap="round"
 												stroke-linejoin="round" class="size-5">
@@ -1172,7 +1190,7 @@
 								</ul>
 							</div>
 							<div class="flex items-center">
-								<a href="https://www.thedailystar.net/#" class="headar-icon search-icon">
+								<a href="https://www.thedailystar.blog/#" class="headar-icon search-icon">
 									<svg class="open-state" width="18" height="18" viewBox="0 0 18 18" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -1187,7 +1205,7 @@
 											stroke-linejoin="round"></path>
 									</svg>
 								</a>
-								<a href="https://www.thedailystar.net/#" class="headar-icon hamburger-icon">
+								<a href="https://www.thedailystar.blog/#" class="headar-icon hamburger-icon">
 									<svg class="open-state" width="20" height="14" viewBox="0 0 20 14" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path d="M0 1H20" stroke="#040D33" stroke-width="2" stroke-linejoin="round">
@@ -1207,7 +1225,7 @@
 								</a>
 							</div>
 						</div>
-						<form class="search-form" action="https://www.thedailystar.net/search" method="get">
+						<form class="search-form" action="https://www.thedailystar.blog/search" method="get">
 							<input type="text" name="t" placeholder="Search With Daily Star">
 							<button type="submit">
 								<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -1234,10 +1252,10 @@
 						<div class="header-nav font-inter font-semibold">
 							<ul class="!gap-0 justify-center">
 								<li class="!gap-0">
-									<a href="https://epaper.thedailystar.net/" target="_blank">E-paper</a>
+									<a href="https://epaper.thedailystar.blog/" target="_blank">E-paper</a>
 								</li>
 								<li class="!gap-0">
-									<a href="https://www.thedailystar.net/todays-news" target="_blank">Today’s News</a>
+									<a href="https://www.thedailystar.blog/todays-news" target="_blank">Today’s News</a>
 								</li>
 							</ul>
 						</div>
@@ -1245,7 +1263,7 @@
 					<div class="mega-menu-wrapper flex-1">
 						<ul>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/news"
+								<a href="https://www.thedailystar.blog/news"
 									data-drupal-link-system-path="taxonomy/term/283513">News</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1265,45 +1283,45 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/news/bangladesh/politics"
+										<a href="https://www.thedailystar.blog/news/bangladesh/politics"
 											data-drupal-link-system-path="taxonomy/term/283525">Politics</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/bangladesh/governance"
+										<a href="https://www.thedailystar.blog/news/bangladesh/governance"
 											data-drupal-link-system-path="taxonomy/term/283521">Governance</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/bangladesh/crime-justice"
+										<a href="https://www.thedailystar.blog/news/bangladesh/crime-justice"
 											data-drupal-link-system-path="taxonomy/term/283533">Crime and Justice</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/bangladesh/accidents-fires"
+										<a href="https://www.thedailystar.blog/news/bangladesh/accidents-fires"
 											data-drupal-link-system-path="taxonomy/term/283717">Accidents and Fires</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/tech-startup"
+										<a href="https://www.thedailystar.blog/tech-startup"
 											data-drupal-link-system-path="taxonomy/term/283065">Technology</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/youth/education"
+										<a href="https://www.thedailystar.blog/youth/education"
 											data-drupal-link-system-path="taxonomy/term/283201">Education</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/environment"
+										<a href="https://www.thedailystar.blog/environment"
 											data-drupal-link-system-path="taxonomy/term/21">Environment</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/health/healthcare"
+										<a href="https://www.thedailystar.blog/health/healthcare"
 											data-drupal-link-system-path="taxonomy/term/283405">Healthcare</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/world"
+										<a href="https://www.thedailystar.blog/news/world"
 											data-drupal-link-system-path="taxonomy/term/8">World</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/opinion"
+								<a href="https://www.thedailystar.blog/opinion"
 									data-drupal-link-system-path="taxonomy/term/4">Opinion</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1323,21 +1341,21 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/opinion/editorial"
+										<a href="https://www.thedailystar.blog/opinion/editorial"
 											data-drupal-link-system-path="taxonomy/term/61">Editorial</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/opinion/views"
+										<a href="https://www.thedailystar.blog/opinion/views"
 											data-drupal-link-system-path="taxonomy/term/283721">Views</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/opinion/interviews"
+										<a href="https://www.thedailystar.blog/opinion/interviews"
 											data-drupal-link-system-path="taxonomy/term/125107">Interviews</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/business"
+								<a href="https://www.thedailystar.blog/business"
 									data-drupal-link-system-path="taxonomy/term/2">Business</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1357,29 +1375,29 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/business/economy"
+										<a href="https://www.thedailystar.blog/business/economy"
 											data-drupal-link-system-path="taxonomy/term/159361">Economy</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/bangladesh/agriculture"
+										<a href="https://www.thedailystar.blog/news/bangladesh/agriculture"
 											data-drupal-link-system-path="taxonomy/term/283529">Agriculture</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/business/economy/industries"
+										<a href="https://www.thedailystar.blog/business/economy/industries"
 											data-drupal-link-system-path="taxonomy/term/283285">Industry</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/tech-startup/startups-0"
+										<a href="https://www.thedailystar.blog/tech-startup/startups-0"
 											data-drupal-link-system-path="taxonomy/term/609736">Startups</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/business/global-economy"
+										<a href="https://www.thedailystar.blog/business/global-economy"
 											data-drupal-link-system-path="taxonomy/term/283325">Global Economy</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/sports"
+								<a href="https://www.thedailystar.blog/sports"
 									data-drupal-link-system-path="taxonomy/term/3">Sports</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1399,25 +1417,25 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/sports/cricket"
+										<a href="https://www.thedailystar.blog/sports/cricket"
 											data-drupal-link-system-path="taxonomy/term/36">Cricket</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/sports/football"
+										<a href="https://www.thedailystar.blog/sports/football"
 											data-drupal-link-system-path="taxonomy/term/38">Football</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/sports/more-sports"
+										<a href="https://www.thedailystar.blog/sports/more-sports"
 											data-drupal-link-system-path="taxonomy/term/283137">More Sports</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/sports/more-sports/tennis"
+										<a href="https://www.thedailystar.blog/sports/more-sports/tennis"
 											data-drupal-link-system-path="taxonomy/term/37">Tennis</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/lifestyle"
+								<a href="https://www.thedailystar.blog/lifestyle"
 									data-drupal-link-system-path="taxonomy/term/6">Lifestyle</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1437,29 +1455,29 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/lifestyle/fashion"
+										<a href="https://www.thedailystar.blog/lifestyle/fashion"
 											data-drupal-link-system-path="taxonomy/term/628">Fashion</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/life-living/relationships-family"
+										<a href="https://www.thedailystar.blog/life-living/relationships-family"
 											data-drupal-link-system-path="taxonomy/term/614811">Relationships</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/life-living/health-fitness"
+										<a href="https://www.thedailystar.blog/life-living/health-fitness"
 											data-drupal-link-system-path="taxonomy/term/287056">Heath and Wellness</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/life-living/food-recipes"
+										<a href="https://www.thedailystar.blog/life-living/food-recipes"
 											data-drupal-link-system-path="taxonomy/term/283269">Food and Recipe</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/lifestyle/travelogue"
+										<a href="https://www.thedailystar.blog/lifestyle/travelogue"
 											data-drupal-link-system-path="taxonomy/term/642">Travelogue</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/culture"
+								<a href="https://www.thedailystar.blog/culture"
 									data-drupal-link-system-path="taxonomy/term/283445">Culture</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1479,29 +1497,29 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/entertainment"
+										<a href="https://www.thedailystar.blog/entertainment"
 											data-drupal-link-system-path="taxonomy/term/283449">Entertainment</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/books-literature"
+										<a href="https://www.thedailystar.blog/books-literature"
 											data-drupal-link-system-path="taxonomy/term/286946">Books and Literature</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/entertainment/heritage"
+										<a href="https://www.thedailystar.blog/entertainment/heritage"
 											data-drupal-link-system-path="taxonomy/term/283469">Heritage</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/entertainment/tv-film"
+										<a href="https://www.thedailystar.blog/entertainment/tv-film"
 											data-drupal-link-system-path="taxonomy/term/283453">Tv &amp; Film</a>
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a href="https://www.thedailystar.net/slow-reads"
+								<a href="https://www.thedailystar.blog/slow-reads"
 									data-drupal-link-system-path="taxonomy/term/1336956">Slow Reads</a>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/youth"
+								<a href="https://www.thedailystar.blog/youth"
 									data-drupal-link-system-path="taxonomy/term/283197">Youth</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1521,29 +1539,29 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/campus/education"
+										<a href="https://www.thedailystar.blog/campus/education"
 											data-drupal-link-system-path="taxonomy/term/607386">Academics</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/youth/careers"
+										<a href="https://www.thedailystar.blog/youth/careers"
 											data-drupal-link-system-path="taxonomy/term/283221">Career and Skills</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/campus/campus-life"
+										<a href="https://www.thedailystar.blog/campus/campus-life"
 											data-drupal-link-system-path="taxonomy/term/607401"> Campus Life</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/campus/campus"
+										<a href="https://www.thedailystar.blog/campus/campus"
 											data-drupal-link-system-path="taxonomy/term/607406">Off Campus</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/shout/pop-culture"
+										<a href="https://www.thedailystar.blog/shout/pop-culture"
 											data-drupal-link-system-path="taxonomy/term/5604">Pop Culture</a>
 									</li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="https://www.thedailystar.net/deep-dive"
+								<a href="https://www.thedailystar.blog/deep-dive"
 									data-drupal-link-system-path="taxonomy/term/1519037"> Ds+</a>
 								<span
 									class="sub_nav_show transition-all duration-300 absolute right-0 top-[2px] cursor-pointer block lg:hidden"><svg
@@ -1563,27 +1581,27 @@
 									</svg></span>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/business/business-plus"
+										<a href="https://www.thedailystar.blog/business/business-plus"
 											data-drupal-link-system-path="taxonomy/term/1442261">Business +</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/news/investigative-stories"
+										<a href="https://www.thedailystar.blog/news/investigative-stories"
 											data-drupal-link-system-path="taxonomy/term/283541">Investigative
 											Stories</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/roundtables"
+										<a href="https://www.thedailystar.blog/roundtables"
 											data-drupal-link-system-path="taxonomy/term/90">Roundtables</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/node/2123156">Supplements</a>
+										<a href="https://www.thedailystar.blog/node/2123156">Supplements</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/law-our-rights"
+										<a href="https://www.thedailystar.blog/law-our-rights"
 											data-drupal-link-system-path="taxonomy/term/53">Law &amp; Our Rights</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/my-dhaka"
+										<a href="https://www.thedailystar.blog/my-dhaka"
 											data-drupal-link-system-path="taxonomy/term/530731">My Dhaka</a>
 									</li>
 								</ul>
@@ -1597,23 +1615,23 @@
 								<h2 class="visually-hidden" id="block-swallow-footer-menu">Footer</h2>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/about-us"
+										<a href="https://www.thedailystar.blog/about-us"
 											data-drupal-link-system-path="node/4039228">About Us</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/contact-us"
+										<a href="https://www.thedailystar.blog/contact-us"
 											data-drupal-link-system-path="node/4039229">Contact Us</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/comment-policy"
+										<a href="https://www.thedailystar.blog/comment-policy"
 											data-drupal-link-system-path="node/4039230">Comment policy</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/apps"
+										<a href="https://www.thedailystar.blog/apps"
 											data-drupal-link-system-path="node/4039232">Apps</a>
 									</li>
 									<li>
-										<a href="https://archive.thedailystar.net/">Archive</a>
+										<a href="https://archive.thedailystar.blog/">Archive</a>
 									</li>
 								</ul>
 							</nav>
@@ -1652,7 +1670,7 @@
 												<span class="clearfix text-formatted">
 													<div class="row mt-2">
 														<div class="column small-12"><a
-																href="https://www.thedailystar.net/news/national-election-2026"
+																href="https://www.thedailystar.blog/news/national-election-2026"
 																target="_blank"><img class="hidden md:!block w-full"
 																	src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/election_banner_home_lg.jpg"
 																	alt="Banner Desktop" width="1520" height="120"
@@ -1680,7 +1698,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/news/bangladesh/news/ramadan-2026-when-does-fasting-begin-makkah-4107671"
+																					<a href="https://www.thedailystar.blog/news/bangladesh/news/ramadan-2026-when-does-fasting-begin-makkah-4107671"
 																						aria-label="Ramadan 2026: When does fasting begin in Makkah?">
 																						<picture>
 																							<source
@@ -1707,7 +1725,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news/bangladesh/news/ramadan-2026-when-does-fasting-begin-makkah-4107671">
+																						href="https://www.thedailystar.blog/news/bangladesh/news/ramadan-2026-when-does-fasting-begin-makkah-4107671">
 																						Ramadan 2026: When does fasting
 																						begin in Makkah?
 																					</a>
@@ -1730,7 +1748,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/sri-lankas-nissanka-leaves-australia-brink-t20-world-cup-exit-4107761">
+																						href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/sri-lankas-nissanka-leaves-australia-brink-t20-world-cup-exit-4107761">
 																						Nissanka guides Sri Lanka into
 																						Super Eights as Australia face
 																						early exit
@@ -1763,7 +1781,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/news/bangladesh/politics/news/cruel-mockery-the-people-after-peaceful-election-drama-mamunul-haque-4107711"
+																					<a href="https://www.thedailystar.blog/news/bangladesh/politics/news/cruel-mockery-the-people-after-peaceful-election-drama-mamunul-haque-4107711"
 																						aria-label="Cruel mockery of the people after a ‘peaceful election’ drama: Mamunul Haque">
 																						<picture>
 																							<source
@@ -1790,7 +1808,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news/bangladesh/politics/news/cruel-mockery-the-people-after-peaceful-election-drama-mamunul-haque-4107711">
+																						href="https://www.thedailystar.blog/news/bangladesh/politics/news/cruel-mockery-the-people-after-peaceful-election-drama-mamunul-haque-4107711">
 																						Cruel mockery of the people
 																						after a ‘peaceful election’
 																						drama: Mamunul Haque
@@ -1814,7 +1832,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/football/news/mourinho-plays-down-real-madrid-return-rumour-rematch-4107971">
+																						href="https://www.thedailystar.blog/sports/football/news/mourinho-plays-down-real-madrid-return-rumour-rematch-4107971">
 																						Mourinho plays down Real Madrid
 																						return rumour before rematch
 																					</a>
@@ -1848,7 +1866,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/business/news/bb-defers-primary-nod-digital-bank-licences-4107721"
+																					<a href="https://www.thedailystar.blog/business/news/bb-defers-primary-nod-digital-bank-licences-4107721"
 																						aria-label="BB defers primary nod for digital bank licences">
 																						<picture>
 																							<source
@@ -1875,7 +1893,7 @@
 																			<div class="card-content">
 																				<h1 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/news/bb-defers-primary-nod-digital-bank-licences-4107721">
+																						href="https://www.thedailystar.blog/business/news/bb-defers-primary-nod-digital-bank-licences-4107721">
 																						BB defers primary nod for
 																						digital bank licences
 																					</a>
@@ -1910,7 +1928,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news/bangladesh/accidents-fires/news/fire-karwan-bazars-kathpotti-under-control-4107741">
+																								href="https://www.thedailystar.blog/news/bangladesh/accidents-fires/news/fire-karwan-bazars-kathpotti-under-control-4107741">
 																								Fire at Karwan Bazar’s
 																								Kathpotti under control
 																							</a>
@@ -1936,7 +1954,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news-0/news/bangladesh-no-longer-country-submissive-foreign-policy-yunus-4107736">
+																								href="https://www.thedailystar.blog/news-0/news/bangladesh-no-longer-country-submissive-foreign-policy-yunus-4107736">
 																								Bangladesh no longer a
 																								country with submissive
 																								foreign policy: Yunus
@@ -1963,7 +1981,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news/world/news/imran-khans-sons-fear-his-health-seek-visas-visit-him-pakistan-4107961">
+																								href="https://www.thedailystar.blog/news/world/news/imran-khans-sons-fear-his-health-seek-visas-visit-him-pakistan-4107961">
 																								Imran Khan's sons fear
 																								for his health, seek
 																								visas to visit him in
@@ -1991,7 +2009,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news/bangladesh/diplomacy/news/ties-india-wont-be-held-hostage-over-hasina-fakhrul-4107646">
+																								href="https://www.thedailystar.blog/news/bangladesh/diplomacy/news/ties-india-wont-be-held-hostage-over-hasina-fakhrul-4107646">
 																								Ties with India won’t be
 																								held hostage over
 																								Hasina: Fakhrul
@@ -2018,7 +2036,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news/bangladesh/crime-justice/news/court-clears-transcom-ceo-simeen-rahman-last-pending-case-4107691">
+																								href="https://www.thedailystar.blog/news/bangladesh/crime-justice/news/court-clears-transcom-ceo-simeen-rahman-last-pending-case-4107691">
 																								Court clears Transcom
 																								CEO Simeen Rahman in
 																								last pending case
@@ -2045,7 +2063,7 @@
 																					<div class="card-content">
 																						<h5 class="card-title ">
 																							<a
-																								href="https://www.thedailystar.net/news/national-election-2026/news/jamaat-ameer-pledges-constructive-opposition-role-parliament-4107726">
+																								href="https://www.thedailystar.blog/news/national-election-2026/news/jamaat-ameer-pledges-constructive-opposition-role-parliament-4107726">
 																								Jamaat ameer pledges
 																								constructive opposition
 																								role in parliament
@@ -2074,7 +2092,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/tv-film/news/oscar-winning-actor-robert-duvall-known-godfather-apocalypse-now-dies-95-4107956"
+																					<a href="https://www.thedailystar.blog/entertainment/tv-film/news/oscar-winning-actor-robert-duvall-known-godfather-apocalypse-now-dies-95-4107956"
 																						aria-label="Oscar winning-actor Robert Duvall known for Godfather, Apocalypse Now dies at 95">
 																						<picture>
 																							<source
@@ -2101,7 +2119,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/tv-film/news/oscar-winning-actor-robert-duvall-known-godfather-apocalypse-now-dies-95-4107956">
+																						href="https://www.thedailystar.blog/entertainment/tv-film/news/oscar-winning-actor-robert-duvall-known-godfather-apocalypse-now-dies-95-4107956">
 																						Oscar winning-actor Robert
 																						Duvall known for Godfather,
 																						Apocalypse Now dies at 95
@@ -2122,7 +2140,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news-0/news/oath-taking-parliament-heres-how-bypass-the-restricted-zone-4107476">
+																						href="https://www.thedailystar.blog/news-0/news/oath-taking-parliament-heres-how-bypass-the-restricted-zone-4107476">
 																						<span class="color-red">Traffic
 																							alert for today</span> /
 																						Oath-taking at parliament:
@@ -2150,7 +2168,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/star-multimedia/news/india-pakistan-china-what-could-be-bangladeshs-strategic-balancing-act-4107456"
+																					<a href="https://www.thedailystar.blog/star-multimedia/news/india-pakistan-china-what-could-be-bangladeshs-strategic-balancing-act-4107456"
 																						aria-label="Watch / India, Pakistan, China: What could be Bangladesh’s strategic balancing act?">
 																						<span class="icon-video"></span>
 																						<picture>
@@ -2178,7 +2196,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/star-multimedia/news/india-pakistan-china-what-could-be-bangladeshs-strategic-balancing-act-4107456">
+																						href="https://www.thedailystar.blog/star-multimedia/news/india-pakistan-china-what-could-be-bangladeshs-strategic-balancing-act-4107456">
 																						<span
 																							class="color-red">Watch</span>
 																						/ India, Pakistan, China: What
@@ -2201,7 +2219,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/slow-reads/focus/news/jinnah-vs-fazlul-huq-the-forgotten-debate-over-pakistan-4106956">
+																						href="https://www.thedailystar.blog/slow-reads/focus/news/jinnah-vs-fazlul-huq-the-forgotten-debate-over-pakistan-4106956">
 																						<span class="color-red">Part
 																							5</span> / Jinnah vs
 																						Fazlul Huq: The forgotten debate
@@ -2213,7 +2231,7 @@
 																					<div class="author ">
 																						<span>
 																							<span>
-																								<a href="https://www.thedailystar.net/author/altaf-parvez"
+																								<a href="https://www.thedailystar.blog/author/altaf-parvez"
 																									hreflang="en">Altaf
 																									Parvez</a>
 																							</span>
@@ -2274,13 +2292,13 @@
 												<div class="news-section-layout-38 news-section ">
 													<div class="row mb-6 mt-6">
 														<div class="column small-12">
-															<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026"
+															<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026"
 																target="_blank">
 																<img src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/icc-dk.jpg"
 																	class="hidden md:!block w-full"
 																	alt="Banner Desktop">
 															</a>
-															<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026"
+															<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026"
 																target="_blank">
 																<img src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/icc-mb.jpg"
 																	class="block md:hidden w-full" alt="Banner Mobile">
@@ -2296,7 +2314,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/rashids-700-numbers-4107706"
+																			<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/rashids-700-numbers-4107706"
 																				aria-label="Rashid’s 700 in numbers">
 																				<picture>
 																					<source
@@ -2320,7 +2338,7 @@
 																	<div class="card-content !gap-6 !order-2 !w-[60%]">
 																		<h6 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/rashids-700-numbers-4107706">
+																				href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/rashids-700-numbers-4107706">
 																				Rashid’s 700 in numbers
 																			</a>
 																		</h6>
@@ -2336,7 +2354,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/england-survive-italy-scare-reach-world-cup-super-8-stage-4107551"
+																			<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/england-survive-italy-scare-reach-world-cup-super-8-stage-4107551"
 																				aria-label="England survive Italy scare to reach World Cup Super 8 stage">
 																				<picture>
 																					<source
@@ -2360,7 +2378,7 @@
 																	<div class="card-content !gap-6 !order-2 !w-[60%]">
 																		<h6 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/england-survive-italy-scare-reach-world-cup-super-8-stage-4107551">
+																				href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/england-survive-italy-scare-reach-world-cup-super-8-stage-4107551">
 																				England survive Italy scare to reach
 																				World Cup Super 8 stage
 																			</a>
@@ -2377,7 +2395,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/rashid-reaches-historic-700-wicket-milestone-t20-cricket-4107446"
+																			<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/rashid-reaches-historic-700-wicket-milestone-t20-cricket-4107446"
 																				aria-label="Rashid reaches historic 700-wicket milestone in T20 cricket">
 																				<picture>
 																					<source
@@ -2401,7 +2419,7 @@
 																	<div class="card-content !gap-6 !order-2 !w-[60%]">
 																		<h6 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/rashid-reaches-historic-700-wicket-milestone-t20-cricket-4107446">
+																				href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/rashid-reaches-historic-700-wicket-milestone-t20-cricket-4107446">
 																				Rashid reaches historic 700-wicket
 																				milestone in T20 cricket
 																			</a>
@@ -2418,7 +2436,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/south-africa-super-eights-without-playing-afghanistan-beat-uae-4107421"
+																			<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/south-africa-super-eights-without-playing-afghanistan-beat-uae-4107421"
 																				aria-label="South Africa into Super Eights without playing as Afghanistan beat UAE">
 																				<picture>
 																					<source
@@ -2442,7 +2460,7 @@
 																	<div class="card-content !gap-6 !order-2 !w-[60%]">
 																		<h6 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/south-africa-super-eights-without-playing-afghanistan-beat-uae-4107421">
+																				href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/south-africa-super-eights-without-playing-afghanistan-beat-uae-4107421">
 																				South Africa into Super Eights without
 																				playing as Afghanistan beat UAE
 																			</a>
@@ -2497,7 +2515,7 @@
 														<div class="column small-12">
 															<div class="section-title-wrapper">
 																<h2 class="section-title">
-																	<a href="https://www.thedailystar.net/spotlight">
+																	<a href="https://www.thedailystar.blog/spotlight">
 																		Spotlight
 																	</a>
 																</h2>
@@ -2510,7 +2528,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/news/bangladesh/news/holy-ramadan-likely-feb-19-says-islamic-foundation-4085956"
+																					<a href="https://www.thedailystar.blog/news/bangladesh/news/holy-ramadan-likely-feb-19-says-islamic-foundation-4085956"
 																						aria-label="Holy Ramadan likely from Feb 19, says Islamic Foundation">
 																						<picture>
 																							<source
@@ -2537,7 +2555,7 @@
 																			<div class="card-content">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news/bangladesh/news/holy-ramadan-likely-feb-19-says-islamic-foundation-4085956">
+																						href="https://www.thedailystar.blog/news/bangladesh/news/holy-ramadan-likely-feb-19-says-islamic-foundation-4085956">
 																						Holy Ramadan likely from Feb 19,
 																						says Islamic Foundation
 																					</a>
@@ -2563,7 +2581,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/news/bangladesh/news/13th-jatiya-sangsad-mps-two-thirds-are-first-timers-4107156"
+																					<a href="https://www.thedailystar.blog/news/bangladesh/news/13th-jatiya-sangsad-mps-two-thirds-are-first-timers-4107156"
 																						aria-label="13th Jatiya Sangsad MPs: Two-thirds are first-timers ">
 																						<picture>
 																							<source
@@ -2590,7 +2608,7 @@
 																			<div class="card-content">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news/bangladesh/news/13th-jatiya-sangsad-mps-two-thirds-are-first-timers-4107156">
+																						href="https://www.thedailystar.blog/news/bangladesh/news/13th-jatiya-sangsad-mps-two-thirds-are-first-timers-4107156">
 																						13th Jatiya Sangsad MPs:
 																						Two-thirds are first-timers
 																					</a>
@@ -2625,7 +2643,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/news/bangladesh/news/us-trade-deal-devil-hidden-the-fine-print-4106291"
+																					<a href="https://www.thedailystar.blog/news/bangladesh/news/us-trade-deal-devil-hidden-the-fine-print-4106291"
 																						aria-label="News analysis / US trade deal: Devil hidden in the fine print">
 																						<picture>
 																							<source
@@ -2652,7 +2670,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/news/bangladesh/news/us-trade-deal-devil-hidden-the-fine-print-4106291">
+																						href="https://www.thedailystar.blog/news/bangladesh/news/us-trade-deal-devil-hidden-the-fine-print-4106291">
 																						<span class="color-red">News
 																							analysis</span> / US trade
 																						deal: Devil hidden in the fine
@@ -2676,7 +2694,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/life-living/news/taking-bangladesh-milan-through-jamdani-and-artistry-4106606"
+																					<a href="https://www.thedailystar.blog/life-living/news/taking-bangladesh-milan-through-jamdani-and-artistry-4106606"
 																						aria-label="#Profile / Taking Bangladesh to Milan through jamdani and artistry">
 																						<picture>
 																							<source
@@ -2703,7 +2721,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/life-living/news/taking-bangladesh-milan-through-jamdani-and-artistry-4106606">
+																						href="https://www.thedailystar.blog/life-living/news/taking-bangladesh-milan-through-jamdani-and-artistry-4106606">
 																						<span
 																							class="color-red">#Profile</span>
 																						/ Taking Bangladesh to Milan
@@ -2727,7 +2745,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/life-living/health-fitness/news/want-better-health-start-adding-kaali-jeera-your-diet-4106586"
+																					<a href="https://www.thedailystar.blog/life-living/health-fitness/news/want-better-health-start-adding-kaali-jeera-your-diet-4106586"
 																						aria-label="Want better health? Start adding kaali jeera to your diet">
 																						<picture>
 																							<source
@@ -2754,7 +2772,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/life-living/health-fitness/news/want-better-health-start-adding-kaali-jeera-your-diet-4106586">
+																						href="https://www.thedailystar.blog/life-living/health-fitness/news/want-better-health-start-adding-kaali-jeera-your-diet-4106586">
 																						Want better health? Start adding
 																						kaali jeera to your diet
 																					</a>
@@ -2776,7 +2794,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/life-living/relationships-family/news/ramadan-the-perfect-time-say-im-sorry-4106591"
+																					<a href="https://www.thedailystar.blog/life-living/relationships-family/news/ramadan-the-perfect-time-say-im-sorry-4106591"
 																						aria-label="Let this Ramadan be about forgiveness and reconnection">
 																						<picture>
 																							<source
@@ -2803,7 +2821,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/life-living/relationships-family/news/ramadan-the-perfect-time-say-im-sorry-4106591">
+																						href="https://www.thedailystar.blog/life-living/relationships-family/news/ramadan-the-perfect-time-say-im-sorry-4106591">
 																						Let this Ramadan be about
 																						forgiveness and reconnection
 																					</a>
@@ -2832,7 +2850,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-video">
-																				<a href="https://www.thedailystar.net/news/bangladesh/news/new-parliament-businesspeople-far-outnumber-politicians-4107141"
+																				<a href="https://www.thedailystar.blog/news/bangladesh/news/new-parliament-businesspeople-far-outnumber-politicians-4107141"
 																					aria-label="New parliament: Businesspeople far outnumber politicians">
 																					<picture>
 																						<source
@@ -2857,7 +2875,7 @@
 																		<div class="card-content">
 																			<h5 class="card-title ">
 																				<a
-																					href="https://www.thedailystar.net/news/bangladesh/news/new-parliament-businesspeople-far-outnumber-politicians-4107141">
+																					href="https://www.thedailystar.blog/news/bangladesh/news/new-parliament-businesspeople-far-outnumber-politicians-4107141">
 																					New parliament: Businesspeople far
 																					outnumber politicians
 																				</a>
@@ -2923,7 +2941,7 @@
 																		<div class="section-title-wrapper">
 																			<h2 class="section-title">
 																				<a
-																					href="https://www.thedailystar.net/opinion">
+																					href="https://www.thedailystar.blog/opinion">
 																					Opinion
 																				</a>
 																			</h2>
@@ -2933,7 +2951,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/opinion/editorial/news/parliament-firsts-and-youthful-lawmakers-4107616"
+																					<a href="https://www.thedailystar.blog/opinion/editorial/news/parliament-firsts-and-youthful-lawmakers-4107616"
 																						aria-label="A parliament of firsts and youthful lawmakers">
 																						<picture>
 																							<source
@@ -2960,7 +2978,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/opinion/editorial/news/parliament-firsts-and-youthful-lawmakers-4107616">
+																						href="https://www.thedailystar.blog/opinion/editorial/news/parliament-firsts-and-youthful-lawmakers-4107616">
 																						A parliament of firsts and
 																						youthful lawmakers
 																					</a>
@@ -2977,7 +2995,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/opinion/views/news/advisers-asset-disclosures-and-test-the-new-government-4106976"
+																					<a href="https://www.thedailystar.blog/opinion/views/news/advisers-asset-disclosures-and-test-the-new-government-4106976"
 																						aria-label="Advisers’ asset disclosures and a test for the new government">
 																						<picture>
 																							<source
@@ -3005,7 +3023,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/opinion/views/news/advisers-asset-disclosures-and-test-the-new-government-4106976">
+																						href="https://www.thedailystar.blog/opinion/views/news/advisers-asset-disclosures-and-test-the-new-government-4106976">
 																						Advisers’ asset disclosures and
 																						a test for the new government
 																					</a>
@@ -3022,7 +3040,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/opinion/views/closer-look/news/the-weight-supermajority-parliament-4106981"
+																					<a href="https://www.thedailystar.blog/opinion/views/closer-look/news/the-weight-supermajority-parliament-4106981"
 																						aria-label="The weight of a supermajority in parliament">
 																						<picture>
 																							<source
@@ -3050,7 +3068,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/opinion/views/closer-look/news/the-weight-supermajority-parliament-4106981">
+																						href="https://www.thedailystar.blog/opinion/views/closer-look/news/the-weight-supermajority-parliament-4106981">
 																						The weight of a supermajority in
 																						parliament
 																					</a>
@@ -3067,7 +3085,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/opinion/editorial/news/publishers-concerns-must-be-heeded-4106951"
+																					<a href="https://www.thedailystar.blog/opinion/editorial/news/publishers-concerns-must-be-heeded-4106951"
 																						aria-label="Publishers’ concerns must be heeded">
 																						<picture>
 																							<source
@@ -3095,7 +3113,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/opinion/editorial/news/publishers-concerns-must-be-heeded-4106951">
+																						href="https://www.thedailystar.blog/opinion/editorial/news/publishers-concerns-must-be-heeded-4106951">
 																						Publishers’ concerns must be
 																						heeded
 																					</a>
@@ -3112,7 +3130,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/opinion/editorial/news/chance-break-the-cycle-retribution-4106731"
+																					<a href="https://www.thedailystar.blog/opinion/editorial/news/chance-break-the-cycle-retribution-4106731"
 																						aria-label="A chance to break the cycle of retribution">
 																						<picture>
 																							<source
@@ -3140,7 +3158,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/opinion/editorial/news/chance-break-the-cycle-retribution-4106731">
+																						href="https://www.thedailystar.blog/opinion/editorial/news/chance-break-the-cycle-retribution-4106731">
 																						A chance to break the cycle of
 																						retribution
 																					</a>
@@ -3154,7 +3172,7 @@
 																		</div>
 																	</div>
 																	<div class="mt-6">
-																		<a href="https://www.thedailystar.net/opinion"
+																		<a href="https://www.thedailystar.blog/opinion"
 																			class="text-white bg-blue-custom hover:bg-gray_10! font-medium rounded-sm text-sm px-5 py-2.5 inline-flex items-center justify-center w-full cursor-pointer">
 																			More
 																			Opinion
@@ -3167,7 +3185,7 @@
 																		<div class="section-title-wrapper">
 																			<h2 class="section-title">
 																				<a
-																					href="https://www.thedailystar.net/business">
+																					href="https://www.thedailystar.blog/business">
 																					Business
 																				</a>
 																			</h2>
@@ -3177,7 +3195,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/business/economy/news/us-trade-deal-overshadows-bangladeshs-economic-freedom-4107846"
+																					<a href="https://www.thedailystar.blog/business/economy/news/us-trade-deal-overshadows-bangladeshs-economic-freedom-4107846"
 																						aria-label="US trade deal overshadows Bangladesh’s economic freedom">
 																						<picture>
 																							<source
@@ -3204,7 +3222,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/economy/news/us-trade-deal-overshadows-bangladeshs-economic-freedom-4107846">
+																						href="https://www.thedailystar.blog/business/economy/news/us-trade-deal-overshadows-bangladeshs-economic-freedom-4107846">
 																						US trade deal overshadows
 																						Bangladesh’s economic freedom
 																					</a>
@@ -3221,7 +3239,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/business/economy/news/development-spending-plunges-16-year-low-4107841"
+																					<a href="https://www.thedailystar.blog/business/economy/news/development-spending-plunges-16-year-low-4107841"
 																						aria-label="Development spending plunges to 16-year low">
 																						<picture>
 																							<source
@@ -3249,7 +3267,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/economy/news/development-spending-plunges-16-year-low-4107841">
+																						href="https://www.thedailystar.blog/business/economy/news/development-spending-plunges-16-year-low-4107841">
 																						Development spending plunges to
 																						16-year low
 																					</a>
@@ -3266,7 +3284,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/business/economy/news/indias-us-tariff-parity-real-threat-or-overblown-fear-bangladesh-4107836"
+																					<a href="https://www.thedailystar.blog/business/economy/news/indias-us-tariff-parity-real-threat-or-overblown-fear-bangladesh-4107836"
 																						aria-label="India’s US tariff parity: Real threat or overblown fear for Bangladesh?">
 																						<picture>
 																							<source
@@ -3294,7 +3312,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/economy/news/indias-us-tariff-parity-real-threat-or-overblown-fear-bangladesh-4107836">
+																						href="https://www.thedailystar.blog/business/economy/news/indias-us-tariff-parity-real-threat-or-overblown-fear-bangladesh-4107836">
 																						India’s US tariff parity: Real
 																						threat or overblown fear for
 																						Bangladesh?
@@ -3312,7 +3330,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/business/economy/news/stocks-see-minor-correction-after-three-day-rally-4107826"
+																					<a href="https://www.thedailystar.blog/business/economy/news/stocks-see-minor-correction-after-three-day-rally-4107826"
 																						aria-label="Stocks see minor correction after three-day rally">
 																						<picture>
 																							<source
@@ -3340,7 +3358,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/economy/news/stocks-see-minor-correction-after-three-day-rally-4107826">
+																						href="https://www.thedailystar.blog/business/economy/news/stocks-see-minor-correction-after-three-day-rally-4107826">
 																						Stocks see minor correction
 																						after three-day rally
 																					</a>
@@ -3357,7 +3375,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/business/economy/news/dhaka-division-gets-half-remittances-december-4107816"
+																					<a href="https://www.thedailystar.blog/business/economy/news/dhaka-division-gets-half-remittances-december-4107816"
 																						aria-label="Dhaka division gets half of remittances in December">
 																						<picture>
 																							<source
@@ -3385,7 +3403,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/business/economy/news/dhaka-division-gets-half-remittances-december-4107816">
+																						href="https://www.thedailystar.blog/business/economy/news/dhaka-division-gets-half-remittances-december-4107816">
 																						Dhaka division gets half of
 																						remittances in December
 																					</a>
@@ -3399,7 +3417,7 @@
 																		</div>
 																	</div>
 																	<div class="mt-6">
-																		<a href="https://www.thedailystar.net/business"
+																		<a href="https://www.thedailystar.blog/business"
 																			class="text-white bg-blue-custom hover:bg-gray_10! font-medium rounded-sm text-sm px-5 py-2.5 inline-flex items-center justify-center w-full cursor-pointer">
 																			More
 																			Business
@@ -3412,7 +3430,7 @@
 																		<div class="section-title-wrapper">
 																			<h2 class="section-title">
 																				<a
-																					href="https://www.thedailystar.net/sports">
+																					href="https://www.thedailystar.blog/sports">
 																					Sports
 																				</a>
 																			</h2>
@@ -3422,7 +3440,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/sports/football/news/butlers-grounded-ambition-bangladesh-eye-impact-asian-cup-debut-4107636"
+																					<a href="https://www.thedailystar.blog/sports/football/news/butlers-grounded-ambition-bangladesh-eye-impact-asian-cup-debut-4107636"
 																						aria-label="Butler&#39;s grounded ambition: Bangladesh eye impact on Asian Cup debut">
 																						<picture>
 																							<source
@@ -3449,7 +3467,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/football/news/butlers-grounded-ambition-bangladesh-eye-impact-asian-cup-debut-4107636">
+																						href="https://www.thedailystar.blog/sports/football/news/butlers-grounded-ambition-bangladesh-eye-impact-asian-cup-debut-4107636">
 																						Butler's grounded ambition:
 																						Bangladesh eye impact on Asian
 																						Cup debut
@@ -3467,7 +3485,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/sports/football/news/bfl-restart-limbo-despite-elections-ending-4107561"
+																					<a href="https://www.thedailystar.blog/sports/football/news/bfl-restart-limbo-despite-elections-ending-4107561"
 																						aria-label="BFL restart in limbo despite elections ending">
 																						<picture>
 																							<source
@@ -3495,7 +3513,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/football/news/bfl-restart-limbo-despite-elections-ending-4107561">
+																						href="https://www.thedailystar.blog/sports/football/news/bfl-restart-limbo-despite-elections-ending-4107561">
 																						BFL restart in limbo despite
 																						elections ending
 																					</a>
@@ -3512,7 +3530,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/sports/cricket/news/bangladesh-through-semis-womens-asia-cup-rising-stars-4107461"
+																					<a href="https://www.thedailystar.blog/sports/cricket/news/bangladesh-through-semis-womens-asia-cup-rising-stars-4107461"
 																						aria-label="Bangladesh through to semis in Women’s Asia Cup Rising Stars">
 																						<picture>
 																							<source
@@ -3540,7 +3558,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/cricket/news/bangladesh-through-semis-womens-asia-cup-rising-stars-4107461">
+																						href="https://www.thedailystar.blog/sports/cricket/news/bangladesh-through-semis-womens-asia-cup-rising-stars-4107461">
 																						Bangladesh through to semis in
 																						Women’s Asia Cup Rising Stars
 																					</a>
@@ -3557,7 +3575,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/smith-added-australia-t20-squad-line-sri-lanka-crunch-4107396"
+																					<a href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/smith-added-australia-t20-squad-line-sri-lanka-crunch-4107396"
 																						aria-label="Smith added to Australia T20 squad, in line for Sri Lanka crunch ">
 																						<picture>
 																							<source
@@ -3585,7 +3603,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/sports-special/t20-world-cup-2026/news/smith-added-australia-t20-squad-line-sri-lanka-crunch-4107396">
+																						href="https://www.thedailystar.blog/sports/sports-special/t20-world-cup-2026/news/smith-added-australia-t20-squad-line-sri-lanka-crunch-4107396">
 																						Smith added to Australia T20
 																						squad, in line for Sri Lanka
 																						crunch
@@ -3603,7 +3621,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/sports/cricket/news/bcb-boss-bulbul-australia-citing-family-emergency-4107381"
+																					<a href="https://www.thedailystar.blog/sports/cricket/news/bcb-boss-bulbul-australia-citing-family-emergency-4107381"
 																						aria-label="BCB boss Bulbul off to Australia citing family reasons">
 																						<picture>
 																							<source
@@ -3631,7 +3649,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/sports/cricket/news/bcb-boss-bulbul-australia-citing-family-emergency-4107381">
+																						href="https://www.thedailystar.blog/sports/cricket/news/bcb-boss-bulbul-australia-citing-family-emergency-4107381">
 																						BCB boss Bulbul off to Australia
 																						citing family reasons
 																					</a>
@@ -3645,7 +3663,7 @@
 																		</div>
 																	</div>
 																	<div class="mt-6">
-																		<a href="https://www.thedailystar.net/sports"
+																		<a href="https://www.thedailystar.blog/sports"
 																			class="text-white bg-blue-custom hover:bg-gray_10! font-medium rounded-sm text-sm px-5 py-2.5 inline-flex items-center justify-center w-full cursor-pointer">
 																			More
 																			Sports
@@ -3658,7 +3676,7 @@
 																		<div class="section-title-wrapper">
 																			<h2 class="section-title">
 																				<a
-																					href="https://www.thedailystar.net/entertainment">
+																					href="https://www.thedailystar.blog/entertainment">
 																					Entertainment
 																				</a>
 																			</h2>
@@ -3668,7 +3686,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107651"
+																					<a href="https://www.thedailystar.blog/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107651"
 																						aria-label="Tagore songs usher in spring in Thakurgaon">
 																						<picture>
 																							<source
@@ -3695,7 +3713,7 @@
 																			<div class="card-content">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107651">
+																						href="https://www.thedailystar.blog/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107651">
 																						Tagore songs usher in spring in
 																						Thakurgaon
 																					</a>
@@ -3712,7 +3730,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107641"
+																					<a href="https://www.thedailystar.blog/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107641"
 																						aria-label="Tagore songs usher in spring in Thakurgaon">
 																						<picture>
 																							<source
@@ -3740,7 +3758,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107641">
+																						href="https://www.thedailystar.blog/entertainment/news/tagore-songs-usher-spring-thakurgaon-4107641">
 																						Tagore songs usher in spring in
 																						Thakurgaon
 																					</a>
@@ -3757,7 +3775,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/tv-film/news/israeli-producer-tehran-tv-series-found-dead-athens-hotel-police-officials-say-4107431"
+																					<a href="https://www.thedailystar.blog/entertainment/tv-film/news/israeli-producer-tehran-tv-series-found-dead-athens-hotel-police-officials-say-4107431"
 																						aria-label="Israeli producer of &#39;Tehran&#39; TV series found dead in Athens hotel, police officials say">
 																						<picture>
 																							<source
@@ -3785,7 +3803,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/tv-film/news/israeli-producer-tehran-tv-series-found-dead-athens-hotel-police-officials-say-4107431">
+																						href="https://www.thedailystar.blog/entertainment/tv-film/news/israeli-producer-tehran-tv-series-found-dead-athens-hotel-police-officials-say-4107431">
 																						Israeli producer of 'Tehran' TV
 																						series found dead in Athens
 																						hotel, police officials say
@@ -3803,7 +3821,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/tv-film/news/sushmita-chatterjee-working-siam-rakkhosh-4107331"
+																					<a href="https://www.thedailystar.blog/entertainment/tv-film/news/sushmita-chatterjee-working-siam-rakkhosh-4107331"
 																						aria-label="Sushmita Chatterjee on working with Siam in ‘Rakkhosh’">
 																						<picture>
 																							<source
@@ -3831,7 +3849,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/tv-film/news/sushmita-chatterjee-working-siam-rakkhosh-4107331">
+																						href="https://www.thedailystar.blog/entertainment/tv-film/news/sushmita-chatterjee-working-siam-rakkhosh-4107331">
 																						Sushmita Chatterjee on working
 																						with Siam in ‘Rakkhosh’
 																					</a>
@@ -3848,7 +3866,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/entertainment/news/kakababu-franchise-expands-fifth-film-bhoyongkor-sundor-4107301"
+																					<a href="https://www.thedailystar.blog/entertainment/news/kakababu-franchise-expands-fifth-film-bhoyongkor-sundor-4107301"
 																						aria-label="Kakababu franchise expands with fifth film ‘Bhoyongkor Sundor’">
 																						<picture>
 																							<source
@@ -3876,7 +3894,7 @@
 																				class="card-content !gap-6 !order-2 !w-[60%]">
 																				<h6 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/news/kakababu-franchise-expands-fifth-film-bhoyongkor-sundor-4107301">
+																						href="https://www.thedailystar.blog/entertainment/news/kakababu-franchise-expands-fifth-film-bhoyongkor-sundor-4107301">
 																						Kakababu franchise expands with
 																						fifth film ‘Bhoyongkor Sundor’
 																					</a>
@@ -3890,7 +3908,7 @@
 																		</div>
 																	</div>
 																	<div class="mt-6">
-																		<a href="https://www.thedailystar.net/entertainment"
+																		<a href="https://www.thedailystar.blog/entertainment"
 																			class="text-white bg-blue-custom hover:bg-gray_10! font-medium rounded-sm text-sm px-5 py-2.5 inline-flex items-center justify-center w-full cursor-pointer">
 																			More
 																			Entertainment
@@ -3913,7 +3931,7 @@
 															<div class="section-title-wrapper">
 																<h2 class="section-title">
 																	<a
-																		href="https://www.thedailystar.net/taxonomy/term/1352514">
+																		href="https://www.thedailystar.blog/taxonomy/term/1352514">
 																		Feature
 																	</a>
 																</h2>
@@ -3925,7 +3943,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[3/4] max-sm:aspect-[336/320]">
-																					<a href="https://www.thedailystar.net/life-living/relationships-family/news/arranged-marriage-losers-love-marriage-advocates-seem-think-so-4105916"
+																					<a href="https://www.thedailystar.blog/life-living/relationships-family/news/arranged-marriage-losers-love-marriage-advocates-seem-think-so-4105916"
 																						aria-label="Is arranged marriage for losers? Love-marriage advocates seem to think so!">
 																						<picture>
 																							<source
@@ -3953,7 +3971,7 @@
 																				class="card-content max-sm:!p-[16px] max-sm:!gap-[10px]">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/life-living/relationships-family/news/arranged-marriage-losers-love-marriage-advocates-seem-think-so-4105916">
+																						href="https://www.thedailystar.blog/life-living/relationships-family/news/arranged-marriage-losers-love-marriage-advocates-seem-think-so-4105916">
 																						Is arranged marriage for losers?
 																						Love-marriage advocates seem to
 																						think so!
@@ -3978,7 +3996,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/life-living/relationships-family/news/hiding-money-your-partner-red-flag-4105906">
+																							href="https://www.thedailystar.blog/life-living/relationships-family/news/hiding-money-your-partner-red-flag-4105906">
 																							Is financial honesty the
 																							foundation of strong
 																							relationships?
@@ -4004,7 +4022,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/life-living/relationships-family/news/what-does-it-mean-give-space-your-partner-4105911">
+																							href="https://www.thedailystar.blog/life-living/relationships-family/news/what-does-it-mean-give-space-your-partner-4105911">
 																							Are you confusing healthy
 																							space with emotional
 																							avoidance and silence?
@@ -4030,7 +4048,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[3/4] max-sm:aspect-[336/320]">
-																					<a href="https://www.thedailystar.net/books-literature/news/faiz-ahmad-faiz-when-romanticism-weaved-revolution-4106036"
+																					<a href="https://www.thedailystar.blog/books-literature/news/faiz-ahmad-faiz-when-romanticism-weaved-revolution-4106036"
 																						aria-label="Faiz Ahmad Faiz: When romanticism weaved into revolution">
 																						<picture>
 																							<source
@@ -4058,7 +4076,7 @@
 																				class="card-content max-sm:!p-[16px] max-sm:!gap-[10px]">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/books-literature/news/faiz-ahmad-faiz-when-romanticism-weaved-revolution-4106036">
+																						href="https://www.thedailystar.blog/books-literature/news/faiz-ahmad-faiz-when-romanticism-weaved-revolution-4106036">
 																						Faiz Ahmad Faiz: When
 																						romanticism weaved into
 																						revolution
@@ -4083,7 +4101,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/books-literature/news/if-characters-different-books-went-date-4104041">
+																							href="https://www.thedailystar.blog/books-literature/news/if-characters-different-books-went-date-4104041">
 																							<span class="color-red">THE
 																								SHELF</span> / If
 																							characters from different
@@ -4110,7 +4128,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/books-literature/news/rediscovering-the-heroes-we-were-never-taught-4104031">
+																							href="https://www.thedailystar.blog/books-literature/news/rediscovering-the-heroes-we-were-never-taught-4104031">
 																							<span class="color-red">BOOK
 																								REVIEW: FICTION</span> /
 																							Rediscovering the heroes we
@@ -4137,7 +4155,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[3/4] max-sm:aspect-[336/320]">
-																					<a href="https://www.thedailystar.net/campus/campus/news/pokemon-legends-z-redefining-the-age-old-adventure-4101931"
+																					<a href="https://www.thedailystar.blog/campus/campus/news/pokemon-legends-z-redefining-the-age-old-adventure-4101931"
 																						aria-label="Video Games / Pokémon Legends: Z-A: redefining the age-old adventure">
 																						<picture>
 																							<source
@@ -4165,7 +4183,7 @@
 																				class="card-content max-sm:!p-[16px] max-sm:!gap-[10px]">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/campus/campus/news/pokemon-legends-z-redefining-the-age-old-adventure-4101931">
+																						href="https://www.thedailystar.blog/campus/campus/news/pokemon-legends-z-redefining-the-age-old-adventure-4101931">
 																						<span class="color-red">Video
 																							Games</span> / Pokémon
 																						Legends: Z-A: redefining the
@@ -4191,7 +4209,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/campus/campus/news/understanding-the-culling-game-jujutsu-kaisens-most-confusing-arc-4102041">
+																							href="https://www.thedailystar.blog/campus/campus/news/understanding-the-culling-game-jujutsu-kaisens-most-confusing-arc-4102041">
 																							<span
 																								class="color-red">Anime</span>
 																							/ Understanding the Culling
@@ -4219,7 +4237,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/campus/campus/news/the-ghost-2016-why-were-stuck-rehearsing-the-past-4103636">
+																							href="https://www.thedailystar.blog/campus/campus/news/the-ghost-2016-why-were-stuck-rehearsing-the-past-4103636">
 																							The ghost of 2016: Why we’re
 																							stuck rehearsing the past
 																						</a>
@@ -4244,7 +4262,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[3/4] max-sm:aspect-[336/320]">
-																					<a href="https://www.thedailystar.net/entertainment/news/the-age-old-debate-over-celebrities-politics-will-perception-change-4105321"
+																					<a href="https://www.thedailystar.blog/entertainment/news/the-age-old-debate-over-celebrities-politics-will-perception-change-4105321"
 																						aria-label="Opinion / The age-old debate over celebrities in politics: Will perception change?">
 																						<picture>
 																							<source
@@ -4272,7 +4290,7 @@
 																				class="card-content max-sm:!p-[16px] max-sm:!gap-[10px]">
 																				<h3 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/entertainment/news/the-age-old-debate-over-celebrities-politics-will-perception-change-4105321">
+																						href="https://www.thedailystar.blog/entertainment/news/the-age-old-debate-over-celebrities-politics-will-perception-change-4105321">
 																						<span
 																							class="color-red">Opinion</span>
 																						/ The age-old debate over
@@ -4299,7 +4317,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/entertainment/news/the-colours-democracy-cartoonists-talk-freedom-pressure-intimidation-4104421">
+																							href="https://www.thedailystar.blog/entertainment/news/the-colours-democracy-cartoonists-talk-freedom-pressure-intimidation-4104421">
 																							The colours of democracy:
 																							Cartoonists talk freedom,
 																							pressure, intimidation
@@ -4325,7 +4343,7 @@
 																				<div class="card-content !gap-[20px]">
 																					<h5 class="card-title ">
 																						<a
-																							href="https://www.thedailystar.net/culture/news/marka-the-symbols-mapping-decades-political-legacy-4103776">
+																							href="https://www.thedailystar.blog/culture/news/marka-the-symbols-mapping-decades-political-legacy-4103776">
 																							‘Marka’ : The symbols
 																							mapping decades of political
 																							legacy
@@ -4418,14 +4436,14 @@
 															<ul class="tabs counter-tabs !list-none !flex-row"
 																data-tabs="" id="most-popular-tabs-210021359">
 																<li class="flex-1 text-center tabs-title is-active">
-																	<a href="https://www.thedailystar.net/#panel-popular"
+																	<a href="https://www.thedailystar.blog/#panel-popular"
 																		aria-selected="true">Editor's Pick</a>
 																</li>
 																<li class="flex-1 text-center tabs-title ">
 																</li>
 																<li class="flex-1 text-center tabs-title">
 																	<a
-																		href="https://www.thedailystar.net/#panel-editors-pick">Slow
+																		href="https://www.thedailystar.blog/#panel-editors-pick">Slow
 																		Reads</a>
 																</li>
 																<li id="magic-line"
@@ -4440,7 +4458,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/business/economy/news/broken-trust-new-govt-faces-battle-clean-banks-4107061">Broken
+																					href="https://www.thedailystar.blog/business/economy/news/broken-trust-new-govt-faces-battle-clean-banks-4107061">Broken
 																					trust: New govt faces battle to
 																					clean up banks</a>
 																			</h4>
@@ -4449,7 +4467,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/opinion/views/the-third-view/news/the-likely-pms-first-crucial-challenge-4106066">The
+																					href="https://www.thedailystar.blog/opinion/views/the-third-view/news/the-likely-pms-first-crucial-challenge-4106066">The
 																					likely PM’s first crucial
 																					challenge</a>
 																			</h4>
@@ -4458,7 +4476,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/big-picture/news/you-won-now-what-4105901">You
+																					href="https://www.thedailystar.blog/slow-reads/big-picture/news/you-won-now-what-4105901">You
 																					won! Now what?</a>
 																			</h4>
 																		</li>
@@ -4466,7 +4484,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/news/national-election-2026/news/bnps-average-win-margins-dwarf-jamaats-4106296">BNP’s
+																					href="https://www.thedailystar.blog/news/national-election-2026/news/bnps-average-win-margins-dwarf-jamaats-4106296">BNP’s
 																					average win margins dwarf
 																					Jamaat’s</a>
 																			</h4>
@@ -4475,7 +4493,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/business/economy/news/rebuilding-business-confidence-cannot-wait-4106111">Rebuilding
+																					href="https://www.thedailystar.blog/business/economy/news/rebuilding-business-confidence-cannot-wait-4106111">Rebuilding
 																					business confidence cannot wait</a>
 																			</h4>
 																		</li>
@@ -4488,7 +4506,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/wisdom/news/first-vote-quiet-hope-4106516">A
+																					href="https://www.thedailystar.blog/slow-reads/wisdom/news/first-vote-quiet-hope-4106516">A
 																					first vote, a quiet hope</a>
 																			</h4>
 																		</li>
@@ -4496,7 +4514,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/big-picture/news/when-policy-lacks-development-philosophy-failure-follows-4089336">When
+																					href="https://www.thedailystar.blog/slow-reads/big-picture/news/when-policy-lacks-development-philosophy-failure-follows-4089336">When
 																					policy lacks a development
 																					philosophy, failure follows</a>
 																			</h4>
@@ -4505,7 +4523,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/big-picture/news/fear-trust-why-policing-must-change-now-4089726">From
+																					href="https://www.thedailystar.blog/slow-reads/big-picture/news/fear-trust-why-policing-must-change-now-4089726">From
 																					fear to trust: Why policing must
 																					change now</a>
 																			</h4>
@@ -4514,7 +4532,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/big-picture/news/how-ignoring-safe-water-and-sanitation-slowing-sustainable-growth-4105446">How
+																					href="https://www.thedailystar.blog/slow-reads/big-picture/news/how-ignoring-safe-water-and-sanitation-slowing-sustainable-growth-4105446">How
 																					is ignoring safe water and
 																					sanitation slowing sustainable
 																					growth?</a>
@@ -4524,7 +4542,7 @@
 																			class="border-b-[1px] border-gray_1 last:border-b-0 pb-[20px]">
 																			<h4 class="card-title">
 																				<a class="!no-underline hover:!underline"
-																					href="https://www.thedailystar.net/slow-reads/unheard-voices/news/dyslexia-blind-spot-bangladeshs-education-and-child-development-system-4105456">Dyslexia:
+																					href="https://www.thedailystar.blog/slow-reads/unheard-voices/news/dyslexia-blind-spot-bangladeshs-education-and-child-development-system-4105456">Dyslexia:
 																					A blind spot in Bangladesh’s
 																					education and child development
 																					system</a>
@@ -4536,7 +4554,7 @@
 														</div>
 														<div class="columns large-7 small-12">
 															<div class="bg-gray_1 p-[20px] flex flex-col gap-[20px]">
-																<a href="https://www.thedailystar.net/star-multimedia">
+																<a href="https://www.thedailystar.blog/star-multimedia">
 																	<img class="hidden lg:!block w-full"
 																		src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/star-multimedia-banner.jpeg"
 																		alt="">
@@ -4551,7 +4569,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/star-multimedia/news/what-benefits-will-new-mps-ministers-get-4106811"
+																					<a href="https://www.thedailystar.blog/star-multimedia/news/what-benefits-will-new-mps-ministers-get-4106811"
 																						aria-label="What benefits will new MPs, ministers get?">
 																						<span class="icon-video"></span>
 																						<picture>
@@ -4580,7 +4598,7 @@
 																				<h5
 																					class="card-title title h3 pb-[20px]">
 																					<a
-																						href="https://www.thedailystar.net/star-multimedia/news/what-benefits-will-new-mps-ministers-get-4106811">
+																						href="https://www.thedailystar.blog/star-multimedia/news/what-benefits-will-new-mps-ministers-get-4106811">
 																						What benefits will new MPs,
 																						ministers get?
 																					</a>
@@ -4602,7 +4620,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-video">
-																					<a href="https://www.thedailystar.net/star-multimedia/news/we-are-always-open-those-who-have-resigned-ncp-akhter-hossen-4106791"
+																					<a href="https://www.thedailystar.blog/star-multimedia/news/we-are-always-open-those-who-have-resigned-ncp-akhter-hossen-4106791"
 																						aria-label="We are always open to those who have resigned from NCP: Akhter Hossen">
 																						<span class="icon-video"></span>
 																						<picture>
@@ -4631,7 +4649,7 @@
 																				<h5
 																					class="card-title title h3 pb-[20px]">
 																					<a
-																						href="https://www.thedailystar.net/star-multimedia/news/we-are-always-open-those-who-have-resigned-ncp-akhter-hossen-4106791">
+																						href="https://www.thedailystar.blog/star-multimedia/news/we-are-always-open-those-who-have-resigned-ncp-akhter-hossen-4106791">
 																						We are always open to those who
 																						have resigned from NCP: Akhter
 																						Hossen
@@ -4665,7 +4683,7 @@
 															<div class="section-title-wrapper">
 																<h2 class="section-title">
 																	<a
-																		href="https://www.thedailystar.net/in-case-you-missed-it">
+																		href="https://www.thedailystar.blog/in-case-you-missed-it">
 																		In Case You Missed It
 																	</a>
 																</h2>
@@ -4678,7 +4696,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/news/ten-tasks-future-bangladesh-4081451"
+																				<a href="https://www.thedailystar.blog/news/ten-tasks-future-bangladesh-4081451"
 																					aria-label="Ten tasks for future Bangladesh">
 																					<picture>
 																						<source
@@ -4704,7 +4722,7 @@
 																			class="card-content !gap-[20px] !order-2 !justify-center !w-auto lg:!w-[46%]">
 																			<h3 class="card-title ">
 																				<a
-																					href="https://www.thedailystar.net/news/ten-tasks-future-bangladesh-4081451">
+																					href="https://www.thedailystar.blog/news/ten-tasks-future-bangladesh-4081451">
 																					Ten tasks for future Bangladesh
 																				</a>
 																			</h3>
@@ -4727,7 +4745,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-video">
-																				<a href="https://www.thedailystar.net/opinion/views/the-third-view/news/facing-the-most-vital-election-ever-4076431"
+																				<a href="https://www.thedailystar.blog/opinion/views/the-third-view/news/facing-the-most-vital-election-ever-4076431"
 																					aria-label="Column by Mahfuz Anam / Facing the most vital election ever">
 																					<picture>
 																						<source
@@ -4752,7 +4770,7 @@
 																		<div class="card-content -order-1">
 																			<h5 class="card-title ">
 																				<a
-																					href="https://www.thedailystar.net/opinion/views/the-third-view/news/facing-the-most-vital-election-ever-4076431">
+																					href="https://www.thedailystar.blog/opinion/views/the-third-view/news/facing-the-most-vital-election-ever-4076431">
 																					<span class="color-red">Column by
 																						Mahfuz Anam</span> / Facing the
 																					most vital election ever
@@ -4781,7 +4799,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-video">
-																				<a href="https://www.thedailystar.net/slow-reads/big-picture/news/fail-save-rivers-and-we-fail-save-ourselves-4081291"
+																				<a href="https://www.thedailystar.blog/slow-reads/big-picture/news/fail-save-rivers-and-we-fail-save-ourselves-4081291"
 																					aria-label="Fail to save rivers, and we fail to save ourselves">
 																					<picture>
 																						<source
@@ -4806,7 +4824,7 @@
 																		<div class="card-content -order-1">
 																			<h5 class="card-title ">
 																				<a
-																					href="https://www.thedailystar.net/slow-reads/big-picture/news/fail-save-rivers-and-we-fail-save-ourselves-4081291">
+																					href="https://www.thedailystar.blog/slow-reads/big-picture/news/fail-save-rivers-and-we-fail-save-ourselves-4081291">
 																					Fail to save rivers, and we fail to
 																					save ourselves
 																				</a>
@@ -4838,7 +4856,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/news/economic-democracy-bangladesh-scope-and-realities-4087636"
+																			<a href="https://www.thedailystar.blog/news/economic-democracy-bangladesh-scope-and-realities-4087636"
 																				aria-label="Economic democracy in Bangladesh: Scope and realities">
 																				<picture>
 																					<source
@@ -4862,7 +4880,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/economic-democracy-bangladesh-scope-and-realities-4087636">
+																				href="https://www.thedailystar.blog/news/economic-democracy-bangladesh-scope-and-realities-4087636">
 																				Economic democracy in Bangladesh: Scope
 																				and realities
 																			</a>
@@ -4878,7 +4896,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/news/bangladeshs-ldc-graduation-why-readiness-the-best-strategy-4086346"
+																			<a href="https://www.thedailystar.blog/news/bangladeshs-ldc-graduation-why-readiness-the-best-strategy-4086346"
 																				aria-label="Bangladesh’s LDC graduation: Why readiness is the best strategy">
 																				<picture>
 																					<source
@@ -4902,7 +4920,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/bangladeshs-ldc-graduation-why-readiness-the-best-strategy-4086346">
+																				href="https://www.thedailystar.blog/news/bangladeshs-ldc-graduation-why-readiness-the-best-strategy-4086346">
 																				Bangladesh’s LDC graduation: Why
 																				readiness is the best strategy
 																			</a>
@@ -4918,7 +4936,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/news/building-bangladeshs-human-capital-digital-age-4085196"
+																			<a href="https://www.thedailystar.blog/news/building-bangladeshs-human-capital-digital-age-4085196"
 																				aria-label="Building Bangladesh’s human capital in a digital age">
 																				<picture>
 																					<source
@@ -4942,7 +4960,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/building-bangladeshs-human-capital-digital-age-4085196">
+																				href="https://www.thedailystar.blog/news/building-bangladeshs-human-capital-digital-age-4085196">
 																				Building Bangladesh’s human capital in a
 																				digital age
 																			</a>
@@ -4958,7 +4976,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/slow-reads/big-picture/news/anti-corruption-drives-fail-not-inevitably-deliberately-4089216"
+																			<a href="https://www.thedailystar.blog/slow-reads/big-picture/news/anti-corruption-drives-fail-not-inevitably-deliberately-4089216"
 																				aria-label="Anti-corruption drives fail, not inevitably but deliberately">
 																				<picture>
 																					<source
@@ -4982,7 +5000,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/slow-reads/big-picture/news/anti-corruption-drives-fail-not-inevitably-deliberately-4089216">
+																				href="https://www.thedailystar.blog/slow-reads/big-picture/news/anti-corruption-drives-fail-not-inevitably-deliberately-4089216">
 																				Anti-corruption drives fail, not
 																				inevitably but deliberately
 																			</a>
@@ -5003,7 +5021,7 @@
 																	<div class="card-image-col">
 																		<div
 																			class="card-image relative overflow-hidden aspect-video">
-																			<a href="https://www.thedailystar.net/slow-reads/unheard-voices/news/the-unfinished-promise-july-the-chittagong-hill-tracts-4089691"
+																			<a href="https://www.thedailystar.blog/slow-reads/unheard-voices/news/the-unfinished-promise-july-the-chittagong-hill-tracts-4089691"
 																				aria-label="The unfinished promise of July in the Chittagong Hill Tracts">
 																				<picture>
 																					<source
@@ -5027,7 +5045,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/slow-reads/unheard-voices/news/the-unfinished-promise-july-the-chittagong-hill-tracts-4089691">
+																				href="https://www.thedailystar.blog/slow-reads/unheard-voices/news/the-unfinished-promise-july-the-chittagong-hill-tracts-4089691">
 																				The unfinished promise of July in the
 																				Chittagong Hill Tracts
 																			</a>
@@ -5048,7 +5066,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/leather-and-footwear-the-next-big-export-frontier-bangladesh-4083291">
+																				href="https://www.thedailystar.blog/news/leather-and-footwear-the-next-big-export-frontier-bangladesh-4083291">
 																				Leather and footwear: The next big
 																				export frontier for Bangladesh
 																			</a>
@@ -5064,7 +5082,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/expectations-non-resident-bangladeshis-the-2026-democratic-government-4083511">
+																				href="https://www.thedailystar.blog/news/expectations-non-resident-bangladeshis-the-2026-democratic-government-4083511">
 																				Expectations of non-resident
 																				Bangladeshis from the 2026 democratic
 																				government
@@ -5081,7 +5099,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/data-frontiers-where-does-bangladesh-fit-the-global-privacy-debate-4085556">
+																				href="https://www.thedailystar.blog/news/data-frontiers-where-does-bangladesh-fit-the-global-privacy-debate-4085556">
 																				Data frontiers : Where does Bangladesh
 																				fit in the global privacy debate?
 																			</a>
@@ -5097,7 +5115,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/news/the-fear-and-the-future-what-the-emergence-ai-can-mean-our-youth-4085546">
+																				href="https://www.thedailystar.blog/news/the-fear-and-the-future-what-the-emergence-ai-can-mean-our-youth-4085546">
 																				The fear and the future: what the
 																				emergence of AI can mean for our youth
 																			</a>
@@ -5113,7 +5131,7 @@
 																	<div class="card-content">
 																		<h5 class="card-title ">
 																			<a
-																				href="https://www.thedailystar.net/slow-reads/big-picture/news/gender-violence-and-bangladeshs-future-4081386">
+																				href="https://www.thedailystar.blog/slow-reads/big-picture/news/gender-violence-and-bangladeshs-future-4081386">
 																				Gender violence and Bangladesh's future
 																			</a>
 																		</h5>
@@ -5145,7 +5163,7 @@
 															<div class="section-title-wrapper">
 																<h2 class="section-title">
 																	<a
-																		href="https://www.thedailystar.net/ds-multimedia">
+																		href="https://www.thedailystar.blog/ds-multimedia">
 																		In Pictures
 																	</a>
 																</h2>
@@ -5159,7 +5177,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260214-4105556"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260214-4105556"
 																					aria-label="Today&#39;s Gallery (2026.02.14)">
 																					<picture>
 																						<source
@@ -5185,7 +5203,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260214-4105556">
+																					href="https://www.thedailystar.blog/todays-gallery-20260214-4105556">
 																					Today's Gallery (2026.02.14)
 																				</a>
 																			</h5>
@@ -5201,7 +5219,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260213-4104971"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260213-4104971"
 																					aria-label="Today&#39;s Gallery (2026.02.13)">
 																					<picture>
 																						<source
@@ -5227,7 +5245,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260213-4104971">
+																					href="https://www.thedailystar.blog/todays-gallery-20260213-4104971">
 																					Today's Gallery (2026.02.13)
 																				</a>
 																			</h5>
@@ -5243,7 +5261,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260212-4104246"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260212-4104246"
 																					aria-label="Today&#39;s Gallery (2026.02.12)">
 																					<picture>
 																						<source
@@ -5269,7 +5287,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260212-4104246">
+																					href="https://www.thedailystar.blog/todays-gallery-20260212-4104246">
 																					Today's Gallery (2026.02.12)
 																				</a>
 																			</h5>
@@ -5288,7 +5306,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260216-4107126"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260216-4107126"
 																					aria-label="Today&#39;s Gallery (2026.02.16)">
 																				</a>
 																			</div>
@@ -5297,7 +5315,7 @@
 																			class="card-content !p-[20px] lg:!p-[24px] lg:!gap-[12px]">
 																			<h5 class="card-title ">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260216-4107126">
+																					href="https://www.thedailystar.blog/todays-gallery-20260216-4107126">
 																					Today's Gallery (2026.02.16)
 																				</a>
 																			</h5>
@@ -5315,7 +5333,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260216-4107121"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260216-4107121"
 																						aria-label="Today&#39;s Gallery (2026.02.16)">
 																						<picture>
 																							<source
@@ -5343,7 +5361,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260216-4107121">
+																						href="https://www.thedailystar.blog/todays-gallery-20260216-4107121">
 																						Today's Gallery (2026.02.16)
 																					</a>
 																				</h5>
@@ -5359,7 +5377,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260215-4106361"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260215-4106361"
 																						aria-label="Today&#39;s Gallery (2026.02.15)">
 																						<picture>
 																							<source
@@ -5387,7 +5405,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260215-4106361">
+																						href="https://www.thedailystar.blog/todays-gallery-20260215-4106361">
 																						Today's Gallery (2026.02.15)
 																					</a>
 																				</h5>
@@ -5407,7 +5425,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260211-4103461"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260211-4103461"
 																					aria-label="Today&#39;s Gallery (2026.02.11)">
 																					<picture>
 																						<source
@@ -5433,7 +5451,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260211-4103461">
+																					href="https://www.thedailystar.blog/todays-gallery-20260211-4103461">
 																					Today's Gallery (2026.02.11)
 																				</a>
 																			</h5>
@@ -5449,7 +5467,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260210-4102591"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260210-4102591"
 																					aria-label="Today&#39;s Gallery (2026.02.10)">
 																					<picture>
 																						<source
@@ -5475,7 +5493,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260210-4102591">
+																					href="https://www.thedailystar.blog/todays-gallery-20260210-4102591">
 																					Today's Gallery (2026.02.10)
 																				</a>
 																			</h5>
@@ -5491,7 +5509,7 @@
 																		<div class="card-image-col">
 																			<div
 																				class="card-image relative overflow-hidden aspect-[4/3]">
-																				<a href="https://www.thedailystar.net/todays-gallery-20260209-4101706"
+																				<a href="https://www.thedailystar.blog/todays-gallery-20260209-4101706"
 																					aria-label="Today&#39;s Gallery (2026.02.09)">
 																					<picture>
 																						<source
@@ -5517,7 +5535,7 @@
 																			class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																			<h5 class="card-title lg:!text-[16px]">
 																				<a
-																					href="https://www.thedailystar.net/todays-gallery-20260209-4101706">
+																					href="https://www.thedailystar.blog/todays-gallery-20260209-4101706">
 																					Today's Gallery (2026.02.09)
 																				</a>
 																			</h5>
@@ -5543,7 +5561,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260216-4107126"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260216-4107126"
 																						aria-label="Today&#39;s Gallery (2026.02.16)">
 																					</a>
 																				</div>
@@ -5552,7 +5570,7 @@
 																				class="card-content !p-[20px] lg:!p-[24px] lg:!gap-[12px]">
 																				<h5 class="card-title ">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260216-4107126">
+																						href="https://www.thedailystar.blog/todays-gallery-20260216-4107126">
 																						Today's Gallery (2026.02.16)
 																					</a>
 																				</h5>
@@ -5572,7 +5590,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260216-4107121"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260216-4107121"
 																						aria-label="Today&#39;s Gallery (2026.02.16)">
 																						<picture>
 																							<source
@@ -5600,7 +5618,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260216-4107121">
+																						href="https://www.thedailystar.blog/todays-gallery-20260216-4107121">
 																						Today's Gallery (2026.02.16)
 																					</a>
 																				</h5>
@@ -5619,7 +5637,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260215-4106361"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260215-4106361"
 																						aria-label="Today&#39;s Gallery (2026.02.15)">
 																						<picture>
 																							<source
@@ -5647,7 +5665,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260215-4106361">
+																						href="https://www.thedailystar.blog/todays-gallery-20260215-4106361">
 																						Today's Gallery (2026.02.15)
 																					</a>
 																				</h5>
@@ -5666,7 +5684,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260214-4105556"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260214-4105556"
 																						aria-label="Today&#39;s Gallery (2026.02.14)">
 																						<picture>
 																							<source
@@ -5694,7 +5712,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260214-4105556">
+																						href="https://www.thedailystar.blog/todays-gallery-20260214-4105556">
 																						Today's Gallery (2026.02.14)
 																					</a>
 																				</h5>
@@ -5713,7 +5731,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260213-4104971"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260213-4104971"
 																						aria-label="Today&#39;s Gallery (2026.02.13)">
 																						<picture>
 																							<source
@@ -5741,7 +5759,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260213-4104971">
+																						href="https://www.thedailystar.blog/todays-gallery-20260213-4104971">
 																						Today's Gallery (2026.02.13)
 																					</a>
 																				</h5>
@@ -5760,7 +5778,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260212-4104246"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260212-4104246"
 																						aria-label="Today&#39;s Gallery (2026.02.12)">
 																						<picture>
 																							<source
@@ -5788,7 +5806,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260212-4104246">
+																						href="https://www.thedailystar.blog/todays-gallery-20260212-4104246">
 																						Today's Gallery (2026.02.12)
 																					</a>
 																				</h5>
@@ -5807,7 +5825,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260211-4103461"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260211-4103461"
 																						aria-label="Today&#39;s Gallery (2026.02.11)">
 																						<picture>
 																							<source
@@ -5835,7 +5853,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260211-4103461">
+																						href="https://www.thedailystar.blog/todays-gallery-20260211-4103461">
 																						Today's Gallery (2026.02.11)
 																					</a>
 																				</h5>
@@ -5854,7 +5872,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260210-4102591"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260210-4102591"
 																						aria-label="Today&#39;s Gallery (2026.02.10)">
 																						<picture>
 																							<source
@@ -5882,7 +5900,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260210-4102591">
+																						href="https://www.thedailystar.blog/todays-gallery-20260210-4102591">
 																						Today's Gallery (2026.02.10)
 																					</a>
 																				</h5>
@@ -5901,7 +5919,7 @@
 																			<div class="card-image-col">
 																				<div
 																					class="card-image relative overflow-hidden aspect-[4/3]">
-																					<a href="https://www.thedailystar.net/todays-gallery-20260209-4101706"
+																					<a href="https://www.thedailystar.blog/todays-gallery-20260209-4101706"
 																						aria-label="Today&#39;s Gallery (2026.02.09)">
 																						<picture>
 																							<source
@@ -5929,7 +5947,7 @@
 																				class="card-content !p-[20px] lg:!p-[16px] lg:!gap-[8px]">
 																				<h5 class="card-title lg:!text-[16px]">
 																					<a
-																						href="https://www.thedailystar.net/todays-gallery-20260209-4101706">
+																						href="https://www.thedailystar.blog/todays-gallery-20260209-4101706">
 																						Today's Gallery (2026.02.09)
 																					</a>
 																				</h5>
@@ -5978,7 +5996,7 @@
 																	aria-atomic="true"></span>
 															</div>
 															<div class="col-span-12 flex justify-center hidden">
-																<a href="https://www.thedailystar.net/ds-multimedia"
+																<a href="https://www.thedailystar.blog/ds-multimedia"
 																	class="button">
 																</a>
 															</div>
@@ -6020,7 +6038,7 @@
 									<div id="block-swallow-sitebranding"
 										class="block block-system block-system-branding-block">
 										<div class="flex gap-[10px] items-center">
-											<a href="https://www.thedailystar.net/" title="Home" rel="home"
+											<a href="https://www.thedailystar.blog/" title="Home" rel="home"
 												class="site-logo basis-2/3">
 												<img class="w-[330px] h-[64px]"
 													src="./The Daily Star - Bangladesh&#39;s National and International Breaking News_files/logo.svg"
@@ -6117,19 +6135,19 @@
 								<h2 class="visually-hidden" id="block-swallow-footer-menu">Footer</h2>
 								<ul>
 									<li>
-										<a href="https://www.thedailystar.net/about-us"
+										<a href="https://www.thedailystar.blog/about-us"
 											data-drupal-link-system-path="node/4039228">About Us</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/contact-us"
+										<a href="https://www.thedailystar.blog/contact-us"
 											data-drupal-link-system-path="node/4039229">Contact Us</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/comment-policy"
+										<a href="https://www.thedailystar.blog/comment-policy"
 											data-drupal-link-system-path="node/4039230">Comment policy</a>
 									</li>
 									<li>
-										<a href="https://www.thedailystar.net/apps"
+										<a href="https://www.thedailystar.blog/apps"
 											data-drupal-link-system-path="node/4039232">Apps</a>
 									</li>
 									<li>
