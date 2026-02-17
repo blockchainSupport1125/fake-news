@@ -1,0 +1,31 @@
+(function ($, Drupal, once) {
+  'use strict';
+
+  Drupal.behaviors.rsiPopularTabs = {
+    attach: function (context, settings) {
+      $(once('rsi-popular-tabs', '.most-popular-layout-2', context)).each(function () {
+        var $tabs = $(this).find('.tabs');
+        var $tabsContent = $(this).find('.tabs-content');
+
+        $tabs.find('a').on('click', function (e) {
+          e.preventDefault();
+
+          var $this = $(this);
+          var $li = $this.parent();
+          var target = $this.attr('href');
+
+          if ($li.hasClass('is-active')) {
+            return;
+          }
+
+          $li.siblings().removeClass('is-active');
+          $li.addClass('is-active');
+
+          $tabsContent.find('.tabs-panel').removeClass('is-active');
+          $tabsContent.find(target).addClass('is-active');
+        });
+      });
+    }
+  };
+
+})(jQuery, Drupal, once);

@@ -1,0 +1,8 @@
+/* CSS for Most Popular block */
+.tabs-content .tabs-panel {
+  display: none;
+}
+
+.tabs-content .tabs-panel.is-active {
+  display: block;
+}

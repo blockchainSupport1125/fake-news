@@ -1,0 +1,162 @@
+(function (Drupal, once) {
+  'use strict';
+
+  Drupal.behaviors.responsiveParallax = {
+    attach: function (context, settings) {
+      once('parallax-init', 'body', context).forEach(function () {
+        new ResponsiveParallax();
+      });
+    }
+  };
+
+  class ResponsiveParallax {
+    constructor() {
+      this.breakpoints = {
+        small: window.matchMedia('(max-width: 639px)'),
+        medium: window.matchMedia('(min-width: 640px) and (max-width: 1023px)'),
+        large: window.matchMedia('(min-width: 1024px)')
+      };
+
+      this.parallaxElements = [];
+      this.isMobile = this.breakpoints.small.matches;
+      this.init();
+    }
+
+    init() {
+      const elements = document.querySelectorAll('[data-parallax]');
+
+      elements.forEach(el => {
+        const sourcesAttr = el.getAttribute('data-parallax-sources');
+        if (!sourcesAttr) return;
+
+        const sources = this.parseParallaxSources(sourcesAttr);
+        const speed = parseFloat(el.getAttribute('data-parallax-speed')) || 0.5;
+
+        this.parallaxElements.push({
+          element: el,
+          sources: sources,
+          speed: speed,
+          isVisible: false
+        });
+      });
+
+      this.updateAllImages();
+
+      if (!this.isMobile) {
+        window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+      }
+
+      window.addEventListener('resize', () => this.handleResize());
+      this.setupIntersectionObserver();
+      this.handleScroll();
+    }
+
+    parseParallaxSources(dataString) {
+      const sources = {};
+
+      // Remove outer brackets and split by "], ["
+      const cleanString = dataString.replace(/^\[|\]$/g, '');
+
+      // Split by "], [" to get individual source entries
+      const entries = cleanString.split(/\],\s*\[/);
+
+      entries.forEach(entry => {
+        // Remove any remaining brackets
+        const cleaned = entry.replace(/[\[\]]/g, '');
+
+        // Split by comma to get URL and breakpoint
+        const lastComma = cleaned.lastIndexOf(',');
+        if (lastComma !== -1) {
+          const url = cleaned.substring(0, lastComma).trim();
+          const breakpoint = cleaned.substring(lastComma + 1).trim();
+
+          // Only assign if not already set (first occurrence wins)
+          if (!sources[breakpoint]) {
+            sources[breakpoint] = url;
+          }
+        }
+      });
+
+      return sources;
+    }
+
+    getCurrentBreakpoint() {
+      if (this.breakpoints.small.matches) return 'small';
+      if (this.breakpoints.medium.matches) return 'medium';
+      return 'large';
+    }
+
+    updateAllImages() {
+      const currentBreakpoint = this.getCurrentBreakpoint();
+
+      this.parallaxElements.forEach(item => {
+        const imageUrl = item.sources[currentBreakpoint] || item.sources.medium || item.sources.large || item.sources.small;
+        if (imageUrl) {
+          item.element.style.backgroundImage = `url('${imageUrl}')`;
+        }
+      });
+    }
+
+    setupIntersectionObserver() {
+      const options = {
+        root: null,
+        threshold: 0,
+        rootMargin: '100px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const item = this.parallaxElements.find(
+            item => item.element === entry.target
+          );
+          if (item) {
+            item.isVisible = entry.isIntersecting;
+          }
+        });
+      }, options);
+
+      this.parallaxElements.forEach(item => {
+        observer.observe(item.element);
+      });
+    }
+
+    handleScroll() {
+      if (this.isMobile) return;
+
+      requestAnimationFrame(() => {
+        this.parallaxElements.forEach(item => {
+          if (!item.isVisible) return;
+
+          const rect = item.element.getBoundingClientRect();
+          const scrolled = window.pageYOffset;
+          const elementTop = rect.top + scrolled;
+          const elementHeight = item.element.offsetHeight;
+          const windowHeight = window.innerHeight;
+
+          const scrollProgress = (scrolled + windowHeight - elementTop) / (windowHeight + elementHeight);
+          const yPos = -(scrollProgress * 100 * item.speed);
+
+          item.element.style.backgroundPositionY = `${yPos}px`;
+        });
+      });
+    }
+
+    handleResize() {
+      const wasMobile = this.isMobile;
+      this.isMobile = this.breakpoints.small.matches;
+
+      this.updateAllImages();
+
+      if (wasMobile !== this.isMobile) {
+        this.parallaxElements.forEach(item => {
+          item.element.style.backgroundPositionY = this.isMobile ? 'center' : '0';
+        });
+
+        if (!this.isMobile) {
+          this.handleScroll();
+        }
+      }
+    }
+  }
+
+})(Drupal, once);

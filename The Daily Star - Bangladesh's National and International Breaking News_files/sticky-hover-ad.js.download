@@ -1,0 +1,9 @@
+(function ($, Drupal, once) {
+  Drupal.behaviors.stickyHoverAd = {
+    attach: function (context, settings) {
+      $(once('stickyHoverAd', '#closeHB', context)).click(function() {
+        $('#dsspHS').hide("slow");
+      });
+    }
+  };
+})(jQuery, Drupal, once);

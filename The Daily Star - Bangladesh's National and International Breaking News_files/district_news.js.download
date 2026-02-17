@@ -1,0 +1,170 @@
+
+(function ($, Drupal, drupalSettings) {
+  Drupal.behaviors.districtNews = {
+    attach: function (context, settings) {
+        // Helpful debug message to confirm the script is loaded on the page.
+        // if (typeof console !== 'undefined' && console.log) {
+        //   console.log('rsi_blocks: district_news.js loaded');
+        // }
+        // The district news logic: populate districts when a division is selected.
+        // Log the full `settings` for debugging so we can confirm drupalSettings reached the behavior.
+        // if (typeof console !== 'undefined' && console.log) {
+        //   console.log('rsi_blocks: full drupal settings:', settings);
+        // }
+
+        var data = settings.rsiBlocks && settings.rsiBlocks.districts ? settings.rsiBlocks.districts : null;
+        // if (!data) {
+        //   // if (typeof console !== 'undefined' && console.warn) {
+        //   //   console.warn('rsi_blocks: rsiBlocks.districts is not available in drupalSettings');
+        //   // }
+        //   // Continue — we'll still attempt to populate divisions from server-rendered HTML if present.
+        // }
+        // else {
+        //   // if (typeof console !== 'undefined' && console.log) {
+        //   //   console.log('rsiBlocks data:', data);
+        //   // }
+        // }
+
+        var $division = $('#division', context);
+        var $district = $('#district', context);
+
+        function clearDistricts() {
+          $district.empty();
+          $district.append($('<option>').attr('value', '').attr('disabled', true).text('District').prop('selected', true));
+        }
+
+        function populateDistricts(parentTid) {
+          clearDistricts();
+          var children = data.children && data.children[parentTid] ? data.children[parentTid] : [];
+          children.forEach(function (c) {
+            $district.append($('<option>').attr('value', c.tid).data('url', c.url).text(c.name));
+          });
+        }
+
+        // Intercept submit on the containing form and redirect to selected district URL.
+        var $form = $division.closest('form');
+        if ($form.length) {
+          var $submit = $form.find('button[type="submit"]').first();
+
+          // Update submit enabled state: only enable when a district is selected.
+          function updateSubmitState() {
+            var hasDistrict = !!$district.find('option:selected').val();
+            if (hasDistrict) {
+              $submit.prop('disabled', false).removeClass('opacity-50 cursor-not-allowed');
+            }
+            else {
+              $submit.prop('disabled', true).addClass('opacity-50 cursor-not-allowed');
+            }
+          }
+
+          // Initialize submit state.
+          updateSubmitState();
+
+          // When division changes, clear districts and update submit state.
+          $division.on('change.rsi-districts-populate', function () {
+            var tid = $(this).val();
+            if (tid) {
+              populateDistricts(tid);
+            }
+            else {
+              clearDistricts();
+            }
+            updateSubmitState();
+          });
+
+          // When district changes, update submit state.
+          $district.on('change.rsi-districts-select', function () {
+            updateSubmitState();
+          });
+
+          // Use a namespaced handler and remove previous handlers to avoid duplicates
+          $form.off('submit.rsi-district-form-submit').on('submit.rsi-district-form-submit', function (e) {
+            var selected = $district.find('option:selected');
+            var distVal = selected.val();
+            var url = selected.data('url');
+
+            // If a district is selected, redirect to its URL.
+            if (distVal && url) {
+                e.preventDefault();
+                window.location.href = url;
+                return;
+              }
+
+            // Prevent submit if district not selected (user selected only division or nothing).
+            e.preventDefault();
+
+            // Show an inline error message (create if missing).
+            var $msg = $form.find('.rsi-district-error');
+            if (!$msg.length) {
+              $msg = $('<div class="rsi-district-error text-sm text-red-600 mt-2" role="alert">Please select a district.</div>');
+              // Try to place message below the selects grid if present, otherwise append to form.
+              var $grid = $form.find('.grid').first();
+              if ($grid.length) {
+                $grid.after($msg);
+              }
+              else {
+                $form.append($msg);
+              }
+            }
+            else {
+              $msg.text('Please select a district.');
+            }
+
+            // Focus district select to encourage selection.
+            $district.focus();
+            return false;
+          });
+        }
+
+        // Populate division select from drupalSettings if the server did not render options.
+        function populateDivisionsIfEmpty() {
+          var existing = $division.find('option').length;
+          // If only placeholder exists (1), populate from data.divisions.
+          if (existing <= 1 && data.divisions && data.divisions.length) {
+            data.divisions.forEach(function (d) {
+              $division.append($('<option>').attr('value', d.tid).text(d.name));
+            });
+          }
+        }
+
+        // Attach change handler safely (use `once()` API when available, fallback to namespaced jQuery handler).
+        var changeHandler = function (evt) {
+          var tid = $(this).val();
+          if (tid) {
+            populateDistricts(tid);
+          }
+          else {
+            clearDistricts();
+          }
+        };
+
+        if (typeof once === 'function') {
+          // once(selector) returns elements that have NOT yet been processed for this id.
+          var processed = once('rsi-districts', '#division', context);
+          if (processed && processed.length) {
+            processed.forEach(function (el) {
+              $(el).on('change', changeHandler);
+            });
+          }
+        }
+        else {
+          // Fallback: use namespaced event and remove any previous handler to avoid duplicates.
+          $division.off('change.rsi-districts').on('change.rsi-districts', changeHandler);
+        }
+
+        // Ensure divisions are present (server-side may not have rendered them).
+        populateDivisionsIfEmpty();
+
+        // No persistence: selections reset on page reload/back as requested.
+
+        // If a division is already selected (e.g., preserved in query), populate districts initially.
+        // Use the first matched element's value.
+        var initialVal = $division.first().val();
+        if (initialVal) {
+          populateDistricts(initialVal);
+        }
+
+        // No saved selection to load; selections will reset on reload/back.
+    }
+  };
+})(jQuery, Drupal, drupalSettings);
